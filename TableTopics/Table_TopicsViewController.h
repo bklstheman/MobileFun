@@ -23,4 +23,6 @@
 - (IBAction)changeTopicLabel:(UITapGestureRecognizer *)sender;
 - (IBAction)pressPickTopic:(UIButton *)sender;
 - (IBAction)pressResetButton:(UIButton *)sender;
+
+
 @end
