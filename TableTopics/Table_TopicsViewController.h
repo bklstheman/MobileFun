@@ -8,15 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate>
+@protocol EditNameTableViewControllerDelegate2;
+
+@protocol EditNameTableViewControllerDelegate <NSObject>
+
+-(void) setNamesForNoteCard;
+
+@end
+
+@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate, EditNameTableViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *nameView;
 @property (strong, nonatomic) IBOutlet UIImageView *topicView;
 
-@property (strong, nonatomic) NSArray *nameArray;
-@property (strong, nonatomic) NSArray *topicArray;
+@property (strong, nonatomic) NSMutableArray *nameArray;
+@property (strong, nonatomic) NSMutableArray *topicArray;
+@property (strong, nonatomic) id<EditNameTableViewControllerDelegate2>editNameDelegate;
 
 
 - (IBAction)changeNameLabel:(UITapGestureRecognizer *)sender;

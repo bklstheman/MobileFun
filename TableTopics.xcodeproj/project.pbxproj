@@ -12,6 +12,7 @@
 		440AE01315B47A1B00E6A42C /* notecards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 440AE01215B47A1B00E6A42C /* notecards.jpg */; };
 		440AE01615B4843E00E6A42C /* Table_TopicUIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440AE01515B4843E00E6A42C /* Table_TopicUIImageViewController.m */; };
 		4413DFE315B8509E00EE5AAC /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4413DFE215B8509E00EE5AAC /* red_button.png */; };
+		44846EA015D878CA005E3C44 /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44846E9F15D878CA005E3C44 /* EditMenuViewController.m */; };
 		44D5C429159EAC0D00544989 /* topicbackground.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44D5C428159EAC0D00544989 /* topicbackground.JPG */; };
 		44D5C42B159EBA7A00544989 /* PanicButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D5C42A159EBA7A00544989 /* PanicButton.png */; };
 		44DED70115C618B300FDF58A /* green_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70015C618B300FDF58A /* green_button.png */; };
@@ -38,6 +39,8 @@
 		440AE01415B4843E00E6A42C /* Table_TopicUIImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table_TopicUIImageViewController.h; sourceTree = "<group>"; };
 		440AE01515B4843E00E6A42C /* Table_TopicUIImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table_TopicUIImageViewController.m; sourceTree = "<group>"; };
 		4413DFE215B8509E00EE5AAC /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
+		44846E9E15D878CA005E3C44 /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
+		44846E9F15D878CA005E3C44 /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
 		44D5C428159EAC0D00544989 /* topicbackground.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topicbackground.JPG; sourceTree = "<group>"; };
 		44D5C42A159EBA7A00544989 /* PanicButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PanicButton.png; sourceTree = "<group>"; };
 		44DED70015C618B300FDF58A /* green_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_button.png; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				44DED70415C6236600FDF58A /* SADCMember.m */,
 				44DED71615C8CF6B00FDF58A /* EditNameTableViewController.h */,
 				44DED71715C8CF6B00FDF58A /* EditNameTableViewController.m */,
+				44846E9E15D878CA005E3C44 /* EditMenuViewController.h */,
+				44846E9F15D878CA005E3C44 /* EditMenuViewController.m */,
 			);
 			path = TableTopics;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				440AE01615B4843E00E6A42C /* Table_TopicUIImageViewController.m in Sources */,
 				44DED70515C6236600FDF58A /* SADCMember.m in Sources */,
 				44DED71815C8CF6B00FDF58A /* EditNameTableViewController.m in Sources */,
+				44846EA015D878CA005E3C44 /* EditMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

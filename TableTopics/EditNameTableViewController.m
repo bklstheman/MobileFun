@@ -8,13 +8,11 @@
 
 #import "EditNameTableViewController.h"
 
-@interface EditNameTableViewController ()
-
-@end
-
 @implementation EditNameTableViewController
 
 @synthesize nameArray;
+@synthesize namesFromTableTopicControllerArray;
+@synthesize delegate2;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -60,6 +58,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void)setNameFromTableTopicArray:(NSArray *)tableTopicArray
+{
+    self.namesFromTableTopicControllerArray = [[NSArray alloc]initWithArray:tableTopicArray];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -92,6 +95,10 @@
     }
     
     cell.textLabel.text = [self.nameArray objectAtIndex:indexPath.row];
+        
+    if([self.namesFromTableTopicControllerArray containsObject:cell.textLabel.text]){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     
     return cell;
 }

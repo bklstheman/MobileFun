@@ -8,6 +8,7 @@
 
 #import "Table_TopicsViewController.h"
 #import "EditNameTableViewController.h"
+#import "EditMenuViewController.h"
 #import "SADCMember.h"
 
 @interface Table_TopicsViewController ()
@@ -21,39 +22,74 @@
 @synthesize topicView;
 @synthesize nameArray;
 @synthesize topicArray;
+@synthesize editNameDelegate;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    topicArray = [[NSArray alloc]initWithObjects:
-                  @"Tell us what is your favorite pick up line and if you have had success?",
-                  @"Would bringing back dinosaurs from extinction be worth the risks?",
-                  @"What is the coolest prize you can get from a cereal box?",
-                  @"Describe the most embarrassing moment of your life",
-                  @"Pick a city anywhere in the world that you would want to visit and tell us why.",
-                  @"Describe the day you found out you were never really human, but an android",
-                  @"Give a speech about the bride and groom of a wedding you are crashing.",
-                  @"If given the chance to play a super hero in a movie, which one will you be and why?",
-                  nil];
-    
-    nameArray = [[NSArray alloc]initWithObjects:
+    [self createNameAndTopicValues];
+    [self becomeFirstResponder];
+}
+
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+- (void)createNameValues
+{
+    nameArray = [[NSMutableArray alloc]initWithObjects:
                  @"William Kluss",
                  @"Timothy Nunamaker",
                  @"Dale Kocian",
-                 @"Jordan Walter",
                  @"Victor Baca",
                  @"Triest Smart",
                  @"Ashwini Achar",
                  @"Gaby Preito",
                  @"Mark Purugganan",
-                 @"Justin Carreon",
                  @"Randy Le",
                  @"Briana Garcia",
+                 @"Ryan Young",
                  @"Gerald Halbeisen",
                  nil];
 }
+
+- (void)createTopicValues
+{
+    topicArray = [[NSMutableArray alloc]initWithObjects:
+                  @"How would you fight a bear with nothing but superglue?",
+                  @"Name one of the hardest things you’ve done and how did it test you?",
+                  @"What is the coolest prize you can get from a cereal box?",
+                  @"If you could name a street, what would you name it?",
+                  @"Pick a city anywhere in the world that you would want to visit and tell us why.",
+                  @"If you could break one law, what law would that be?",
+                  @"Give a wedding toast at your best friend's wedding if you were the best man/maid",
+                  @"Describe the day you found out you were never really human, but an android",
+                  @"If you get a chance to relive your past for a day, which time would that be and why",
+                  @"Why did you retire from being a circus clown?",
+                  @"Name one super power you would want and what would you use it for?",
+                  @"If you could visit a planet for a week which planet would you go?",
+                  @"If you could eat only one food for a month, what food would that be?",
+                  @"If given the chance to play a super hero in a movie, which one will you be and why?",
+                  @"If you were President for a day, what is the first thing you would want to do?",
+                  @"Describe what silence sounds like?",
+                  nil];
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(event.type == UIEventTypeMotion && UIEventSubtypeMotionShake){
+        [self pressPickTopic:nil];
+    }
+}
+
+- (void)createNameAndTopicValues
+{
+    [self createNameValues];
+    [self createTopicValues];
+}
+
 
 - (void)createDummySADCNames {
     SADCMember *user1 = [[SADCMember alloc]init];
@@ -78,11 +114,16 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if([segue.identifier isEqualToString:@"EditNameSegue"]) {
-        EditNameTableViewController *destination = segue.destinationViewController;
-        if([destination respondsToSelector:@selector(setDelegate:)]){
-            //[destination setDelegate:self];
+    if([segue.identifier isEqualToString:@"EditMenuSegue"]) {
+        EditMenuViewController *destination = segue.destinationViewController;
+        //[editNameDelegate setNameFromTableTopicArray:self.nameArray];
+        if([destination respondsToSelector:@selector(setNameArray:)]){
+            [destination setNameArray:self.nameArray];
         }
+        if([destination respondsToSelector:@selector(setTopicArray:)])
+           {
+               [destination setTopicArray:self.topicArray];
+           }
     }
 }
     
@@ -94,6 +135,12 @@
     [self animateNameCard];
     
     [nameLabel setText:[nameArray objectAtIndex:nameNumber]];
+    
+    [self.nameArray removeObjectAtIndex:nameNumber];
+    
+    if(self.nameArray.count == 0){
+        [self createNameValues];
+    }
 
 
 }
@@ -105,6 +152,12 @@
     [self animateTopicCard];
     
     [topicLabel setText:[topicArray objectAtIndex:topicNumber]];
+    [self.topicArray removeObjectAtIndex:topicNumber];
+    
+    if(self.topicArray.count == 0)
+    {
+        [self createTopicValues];
+    }
 
 
 }
@@ -118,12 +171,29 @@
     
     [nameLabel setText:[nameArray objectAtIndex:nameNumber]];
     [topicLabel setText:[topicArray objectAtIndex:topicNumber]];
+    
+    
+    //Removes name and topic so they do not reappear
+    [self.nameArray removeObjectAtIndex:nameNumber];
+    [self.topicArray removeObjectAtIndex:topicNumber];
+    
+    //TODO: Might need to do something if the value is 0.
+    if(self.nameArray.count == 0){
+        [self createNameValues];
+    }
+    
+    if(self.topicArray.count == 0)
+    {
+        [self createTopicValues];
+    }
 }
 
 - (IBAction)pressResetButton:(UIButton *)sender {
     
     [nameLabel setText:@"Name:"];
     [topicLabel setText:@"Topic:"];
+    
+    [self createNameAndTopicValues];
 }
 
 - (void)animateNoteCards {
