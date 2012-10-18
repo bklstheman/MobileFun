@@ -59,20 +59,17 @@
 {
     topicArray = [[NSMutableArray alloc]initWithObjects:
                   @"How would you fight a bear with nothing but superglue?",
+                  @"If you could be a Sesame Street character, who would you be and why?",
                   @"Name one of the hardest things you’ve done and how did it test you?",
                   @"What is the coolest prize you can get from a cereal box?",
-                  @"If you could name a street, what would you name it?",
                   @"Pick a city anywhere in the world that you would want to visit and tell us why.",
                   @"If you could break one law, what law would that be?",
-                  @"Give a wedding toast at your best friend's wedding if you were the best man/maid",
-                  @"Describe the day you found out you were never really human, but an android",
-                  @"If you get a chance to relive your past for a day, which time would that be and why",
-                  @"Why did you retire from being a circus clown?",
+                  @"Tell us what your perfect staycation",
+                  @"If you could rename yourself what name would you choose?",
+                  @"If the internet went down, how would you personally be impacted?",
                   @"Name one super power you would want and what would you use it for?",
-                  @"If you could visit a planet for a week which planet would you go?",
-                  @"If you could eat only one food for a month, what food would that be?",
+                  @"What is the worst vacation you could go on?",
                   @"If given the chance to play a super hero in a movie, which one will you be and why?",
-                  @"If you were President for a day, what is the first thing you would want to do?",
                   @"Describe what silence sounds like?",
                   nil];
 }
@@ -113,7 +110,6 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     if([segue.identifier isEqualToString:@"EditMenuSegue"]) {
         EditMenuViewController *destination = segue.destinationViewController;
         //[editNameDelegate setNameFromTableTopicArray:self.nameArray];

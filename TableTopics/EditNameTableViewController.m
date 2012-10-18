@@ -7,12 +7,14 @@
 //
 
 #import "EditNameTableViewController.h"
+#import "EditMenuViewController.h"
 
 @implementation EditNameTableViewController
 
 @synthesize nameArray;
 @synthesize namesFromTableTopicControllerArray;
 @synthesize delegate2;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,6 +53,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    /*
+    [super viewWillDisappear:animated];
+    
+    if([self.delegate respondsToSelector:setNewNam ]){
+        
+    } */
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -60,7 +72,7 @@
 
 -(void)setNameFromTableTopicArray:(NSArray *)tableTopicArray
 {
-    self.namesFromTableTopicControllerArray = [[NSArray alloc]initWithArray:tableTopicArray];
+    self.namesFromTableTopicControllerArray = [[NSMutableArray alloc]initWithArray:tableTopicArray];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -146,13 +158,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        [self.namesFromTableTopicControllerArray removeObject:cell.textLabel.text];
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [self.namesFromTableTopicControllerArray addObject:cell.textLabel.text];
+    }
+    
+    [cell setSelected:NO];
 }
 
 @end

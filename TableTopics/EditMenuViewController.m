@@ -15,6 +15,7 @@
 @implementation EditMenuViewController
 @synthesize nameArray;
 @synthesize topicArray;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,6 +59,11 @@
         }
 
     }
+}
+
+-(void)setNameArray:(NSMutableArray *)newNameArray
+{
+    self.nameArray = newNameArray;
 }
 
 #pragma mark - Table view data source
