@@ -31,6 +31,7 @@
     [super viewDidLoad];
     
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"2dCF2ae.jpg"]]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

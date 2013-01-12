@@ -29,11 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableTopicField.layer.borderWidth = 1;
+    /*self.tableTopicField.layer.borderWidth = 1;
     self.tableTopicField.layer.cornerRadius = 10;
-    self.tableTopicField.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.tableTopicField.layer.borderColor = [[UIColor grayColor] CGColor];*/
+    self.tableTopicField.backgroundColor = [UIColor clearColor];
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
-	// Do any additional setup after loading the view.    
+
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
