@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "MemberVO.h"
 
 @interface Table_TopicsAppDelegate : UIResponder <UIApplicationDelegate>
 

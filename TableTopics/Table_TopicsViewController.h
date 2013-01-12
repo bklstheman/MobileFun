@@ -7,16 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Table_TopicsAppDelegate.h"
+#import "TableTopicCoreDataService.h"
 
-@protocol EditNameTableViewControllerDelegate2;
-
-@protocol EditNameTableViewControllerDelegate <NSObject>
-
--(void) setNamesForNoteCard;
-
-@end
-
-@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate, EditNameTableViewControllerDelegate>
+@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
@@ -25,13 +19,14 @@
 
 @property (strong, nonatomic) NSMutableArray *nameArray;
 @property (strong, nonatomic) NSMutableArray *topicArray;
-@property (strong, nonatomic) id<EditNameTableViewControllerDelegate2>editNameDelegate;
 
+@property (strong, nonatomic) Table_TopicsAppDelegate *delegate;
+@property (strong, nonatomic) TableTopicCoreDataService *coreDataService;
 
 - (IBAction)changeNameLabel:(UITapGestureRecognizer *)sender;
 - (IBAction)changeTopicLabel:(UITapGestureRecognizer *)sender;
 - (IBAction)pressPickTopic:(UIButton *)sender;
-- (IBAction)pressResetButton:(UIButton *)sender;
+- (IBAction)pressResetButton:(id)sender;
 
 
 @end

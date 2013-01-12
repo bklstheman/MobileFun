@@ -8,20 +8,13 @@
 
 @protocol EditMenuDelegate;
 
-@protocol EditNameTableViewControllerDelegate2 <NSObject>
-
--(void)setNameFromTableTopicArray:(NSArray *)tableTopicArray;
-
-@end
-
 
 #import <UIKit/UIKit.h>
+#import "TableTopicCoreDataService.h"
 
-@interface EditNameTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, EditNameTableViewControllerDelegate2>
+@interface EditNameTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) id<EditNameTableViewControllerDelegate2>delegate2;
-@property (strong, nonatomic) id<EditMenuDelegate> delegate;
-@property (strong, nonatomic) NSArray *nameArray;
-@property (strong, nonatomic) NSMutableArray *namesFromTableTopicControllerArray;
+@property (strong, nonatomic) NSMutableArray *nameArray;
+@property (strong, nonatomic) TableTopicCoreDataService *coreDataService;
 
 @end

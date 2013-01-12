@@ -7,15 +7,9 @@
 //
 
 #import "EditMenuViewController.h"
-#import "EditNameTableViewController.h"
-@interface EditMenuViewController ()
-
-@end
 
 @implementation EditMenuViewController
-@synthesize nameArray;
-@synthesize topicArray;
-@synthesize delegate;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,22 +43,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    if([segue.identifier isEqualToString:@"EditNameSegue"]) {
-        EditNameTableViewController *destination = segue.destinationViewController;
-        if([destination respondsToSelector:@selector(setNameFromTableTopicArray:)]){
-            [destination setNameFromTableTopicArray:self.nameArray];
-        }
-
-    }
-}
-
--(void)setNameArray:(NSMutableArray *)newNameArray
-{
-    self.nameArray = newNameArray;
-}
 
 #pragma mark - Table view data source
 

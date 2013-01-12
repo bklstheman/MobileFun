@@ -7,9 +7,7 @@
 //
 
 #import "Table_TopicsViewController.h"
-#import "EditNameTableViewController.h"
-#import "EditMenuViewController.h"
-#import "SADCMember.h"
+#import "Table_TopicsAppDelegate.h"
 
 @interface Table_TopicsViewController ()
 
@@ -22,42 +20,40 @@
 @synthesize topicView;
 @synthesize nameArray;
 @synthesize topicArray;
-@synthesize editNameDelegate;
+@synthesize delegate;
+@synthesize coreDataService;
 
+
+#pragma Inital Controller setup methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self createNameAndTopicValues];
+    self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    
     [self becomeFirstResponder];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self createNameAndTopicValues];
 }
 
 -(BOOL)canBecomeFirstResponder
 {
     return YES;
 }
+
 - (void)createNameValues
 {
-    nameArray = [[NSMutableArray alloc]initWithObjects:
-                 @"William Kluss",
-                 @"Timothy Nunamaker",
-                 @"Dale Kocian",
-                 @"Victor Baca",
-                 @"Triest Smart",
-                 @"Ashwini Achar",
-                 @"Gaby Preito",
-                 @"Mark Purugganan",
-                 @"Randy Le",
-                 @"Briana Garcia",
-                 @"Ryan Young",
-                 @"Gerald Halbeisen",
-                 nil];
+    self.nameArray = [coreDataService getAllSelectedMembers];
 }
 
 - (void)createTopicValues
 {
-    topicArray = [[NSMutableArray alloc]initWithObjects:
+    //TODO:Have this be populated by delegate method.
+    self.topicArray = [[NSMutableArray alloc]initWithObjects:
                   @"How would you fight a bear with nothing but superglue?",
                   @"If you could be a Sesame Street character, who would you be and why?",
                   @"Name one of the hardest things you’ve done and how did it test you?",
@@ -74,13 +70,6 @@
                   nil];
 }
 
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if(event.type == UIEventTypeMotion && UIEventSubtypeMotionShake){
-        [self pressPickTopic:nil];
-    }
-}
-
 - (void)createNameAndTopicValues
 {
     [self createNameValues];
@@ -88,9 +77,11 @@
 }
 
 
-- (void)createDummySADCNames {
-    SADCMember *user1 = [[SADCMember alloc]init];
-    
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(event.type == UIEventTypeMotion && UIEventSubtypeMotionShake){
+        [self pressPickTopic:nil];
+    }
 }
 
 - (void)viewDidUnload
@@ -108,40 +99,35 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"EditMenuSegue"]) {
-        EditMenuViewController *destination = segue.destinationViewController;
-        //[editNameDelegate setNameFromTableTopicArray:self.nameArray];
-        if([destination respondsToSelector:@selector(setNameArray:)]){
-            [destination setNameArray:self.nameArray];
-        }
-        if([destination respondsToSelector:@selector(setTopicArray:)])
-           {
-               [destination setTopicArray:self.topicArray];
-           }
-    }
-}
-    
-
+#pragma Card Selecting Methods
 - (IBAction)changeNameLabel:(UITapGestureRecognizer *)sender {
+    
+    //If the array is empty just get the fudge out of here.
+    if(self.nameArray.count == 0){
+        return;
+    }
     
     NSInteger nameNumber = arc4random() % nameArray.count;
     
     [self animateNameCard];
     
-    [nameLabel setText:[nameArray objectAtIndex:nameNumber]];
+    MemberVO *memberVO = [self.nameArray objectAtIndex:nameNumber];
+    NSString *displayName = memberVO.printFullName;
+    [nameLabel setText:displayName];
     
     [self.nameArray removeObjectAtIndex:nameNumber];
     
+    //If we hit the last person in the list, go back and repopulate the list. This way we can start over
     if(self.nameArray.count == 0){
         [self createNameValues];
     }
-
-
 }
 
 - (IBAction)changeTopicLabel:(UITapGestureRecognizer *)sender {
+    
+    if(self.topicArray.count == 0){
+        return;
+    }
     
     NSInteger topicNumber = arc4random() % topicArray.count;
     
@@ -154,44 +140,24 @@
     {
         [self createTopicValues];
     }
-
-
 }
 
 - (IBAction)pressPickTopic:(UIButton *)sender {
-    
-    NSInteger nameNumber = arc4random() % nameArray.count;
-    NSInteger topicNumber = arc4random() % topicArray.count;
-    
+        
     [self animateNoteCards];
     
-    [nameLabel setText:[nameArray objectAtIndex:nameNumber]];
-    [topicLabel setText:[topicArray objectAtIndex:topicNumber]];
-    
-    
-    //Removes name and topic so they do not reappear
-    [self.nameArray removeObjectAtIndex:nameNumber];
-    [self.topicArray removeObjectAtIndex:topicNumber];
-    
-    //TODO: Might need to do something if the value is 0.
-    if(self.nameArray.count == 0){
-        [self createNameValues];
-    }
-    
-    if(self.topicArray.count == 0)
-    {
-        [self createTopicValues];
-    }
+    [self changeNameLabel:nil];
+    [self changeTopicLabel:nil];
 }
 
-- (IBAction)pressResetButton:(UIButton *)sender {
-    
+- (IBAction)pressResetButton:(id)sender {
     [nameLabel setText:@"Name:"];
     [topicLabel setText:@"Topic:"];
     
     [self createNameAndTopicValues];
 }
 
+#pragma Animation Methods
 - (void)animateNoteCards {
     
     [self animateNameCard];

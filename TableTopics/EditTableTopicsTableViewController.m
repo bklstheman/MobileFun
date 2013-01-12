@@ -1,18 +1,20 @@
 //
-//  EditNameTableViewController.m
+//  EditTableTopicsTableViewController.m
 //  TableTopics
 //
-//  Created by k526712 on 7/31/12.
+//  Created by k526712 on 1/3/13.
 //
 //
 
-#import "EditNameTableViewController.h"
-#import "Member.h"
-#import "MemberVO.h"
+#import "EditTableTopicsTableViewController.h"
 
-@implementation EditNameTableViewController
+@interface EditTableTopicsTableViewController ()
 
-@synthesize nameArray;
+@end
+
+@implementation EditTableTopicsTableViewController
+
+@synthesize tableTopicArray;
 @synthesize coreDataService;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -39,32 +41,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.nameArray = [coreDataService getAllMembers];
-    
+    self.tableTopicArray = [coreDataService getAllTableTopics];
     [self.tableView reloadData];
-
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)didReceiveMemoryWarning
 {
-    /*
-    [super viewWillDisappear:animated];
-    
-    if([self.delegate respondsToSelector:setNewNam ]){
-        
-    } */
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -78,7 +62,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.nameArray.count;
+    return self.tableTopicArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,17 +75,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    MemberVO *memberVO = [[MemberVO alloc]init];
-        
-    memberVO = [self.nameArray objectAtIndex:indexPath.row];
-
-    cell.textLabel.text = memberVO.printFullName;
+    TableTopicVO *tableTopicVO = [[TableTopicVO alloc]init];
     
-    if([memberVO.isMemberSelected isEqualToNumber:[NSNumber numberWithBool:TRUE]]){
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    tableTopicVO = [self.tableTopicArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = tableTopicVO.topicDescription;
     
     return cell;
 }
@@ -120,12 +98,12 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source       
-        MemberVO *memberVO = [self.nameArray objectAtIndex:indexPath.row];
+        // Delete the row from the data source
         
-        [coreDataService removeMember:memberVO];
+        TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:indexPath.row];
+        [self.coreDataService removeTableTopic:tableTopicVO];
         
-        [self.nameArray removeObjectAtIndex:indexPath.row];
+        [self.tableTopicArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -154,22 +132,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
-    MemberVO *memberVO = [self.nameArray objectAtIndex:indexPath.row];
-    
-    [coreDataService editIsSelect:memberVO];
-    
-    //TODO Change this logic. There is a better way but it will take a bit longer to write. I just want this done, NOW.
-    if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
-        memberVO.isMemberSelected = [NSNumber numberWithBool:FALSE];
-    } else {
-        memberVO.isMemberSelected = [NSNumber numberWithBool:TRUE];
-    }
-    
-    [self.nameArray replaceObjectAtIndex:indexPath.row withObject:memberVO];
-    [cell setSelected:NO];
-    [tableView reloadData];
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 @end
