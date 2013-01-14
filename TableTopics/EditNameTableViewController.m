@@ -42,8 +42,31 @@
 {
     self.nameArray = [coreDataService getAllMembers];
     
+    if(self.nameArray.count == 0){
+        //create the message on the board.
+        [self addEmptyLabelMessage];
+                
+        //This is to remove the warning after someone adds a member to the list.
+    } else if (self.nameArray.count != 0){
+        for(id view in self.view.subviews){
+            if([view isKindOfClass:[UILabel class]]){
+                [view removeFromSuperview];
+            }
+        }
+    }
+    
     [self.tableView reloadData];
 
+}
+
+-(void) addEmptyLabelMessage
+{
+    UILabel *emptyLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 0, 300, 300)];
+    emptyLabel.text = @"You don't have any Members. Go and create some!";
+    emptyLabel.backgroundColor = [UIColor clearColor];
+    emptyLabel.numberOfLines = 2;
+    
+    [self.view addSubview:emptyLabel];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -128,6 +151,10 @@
         
         [self.nameArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        if (self.nameArray.count == 0) {
+            [self addEmptyLabelMessage];
+        }
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

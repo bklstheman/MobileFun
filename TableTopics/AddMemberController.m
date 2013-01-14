@@ -17,6 +17,7 @@
 
 @synthesize firstNameTextField;
 @synthesize lastNameTextField;
+@synthesize memberSubmitButton;
 @synthesize coreDataService;
 
 
@@ -33,6 +34,8 @@
 {
     [super viewDidLoad];
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    
+    self.memberSubmitButton.layer.borderWidth = 1;
 	// Do any additional setup after loading the view.
 }
 
@@ -46,6 +49,7 @@
     [self setFirstNameTextField:nil];
     [self setLastNameTextField:nil];
     [self setSubmitButton:nil];
+    [self setMemberSubmitButton:nil];
     [super viewDidUnload];
 }
 

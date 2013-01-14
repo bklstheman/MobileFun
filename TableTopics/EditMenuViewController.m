@@ -10,6 +10,8 @@
 
 @implementation EditMenuViewController
 
+@synthesize membersButton;
+@synthesize tableTopicButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,7 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.membersButton.layer.borderWidth = 1;
+    self.tableTopicButton.layer.borderWidth = 1;
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,4 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setMembersButton:nil];
+    [self setTableTopicButton:nil];
+    [super viewDidUnload];
+}
 @end

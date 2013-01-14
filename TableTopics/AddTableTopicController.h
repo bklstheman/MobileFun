@@ -12,6 +12,8 @@
 
 @interface AddTableTopicController : UIViewController<UITextViewDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *topicSubmitButton;
+
 @property (strong, nonatomic) IBOutlet UITextView *tableTopicField;
 @property (strong, nonatomic) TableTopicCoreDataService *coreDataService;
 

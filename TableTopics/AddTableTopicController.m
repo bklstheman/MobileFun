@@ -15,6 +15,7 @@
 @implementation AddTableTopicController
 
 @synthesize tableTopicField;
+@synthesize topicSubmitButton;
 @synthesize coreDataService;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,10 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    /*self.tableTopicField.layer.borderWidth = 1;
-    self.tableTopicField.layer.cornerRadius = 10;
-    self.tableTopicField.layer.borderColor = [[UIColor grayColor] CGColor];*/
     self.tableTopicField.backgroundColor = [UIColor clearColor];
+    self.topicSubmitButton.layer.borderWidth = 1;
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
 
     // Do any additional setup after loading the view.
@@ -46,6 +45,7 @@
 
 - (void)viewDidUnload {
     [self setTableTopicField:nil];
+    [self setTopicSubmitButton:nil];
     [super viewDidUnload];
 }
 
