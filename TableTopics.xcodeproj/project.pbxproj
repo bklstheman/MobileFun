@@ -42,6 +42,8 @@
 		44F466711598004900C80B05 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F4666F1598004900C80B05 /* MainStoryboard.storyboard */; };
 		44F466741598004900C80B05 /* Table_TopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F466731598004900C80B05 /* Table_TopicsViewController.m */; };
 		6B0DB14716A391F90010A0EE /* woodenblock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0DB14616A391F90010A0EE /* woodenblock.png */; };
+		6B96A8AA16ACCF1800BB20CD /* TableTopicUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96A8A916ACCF1800BB20CD /* TableTopicUICollectionViewController.m */; };
+		6B96A8AD16ACD8F800BB20CD /* TableTopicUICollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96A8AC16ACD8F800BB20CD /* TableTopicUICollectionCell.m */; };
 		6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */; };
 		6BBA915016A11FE700DBE0E5 /* card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914F16A11FE700DBE0E5 /* card.jpg */; };
 /* End PBXBuildFile section */
@@ -97,6 +99,10 @@
 		44F466721598004900C80B05 /* Table_TopicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Table_TopicsViewController.h; sourceTree = "<group>"; };
 		44F466731598004900C80B05 /* Table_TopicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Table_TopicsViewController.m; sourceTree = "<group>"; };
 		6B0DB14616A391F90010A0EE /* woodenblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodenblock.png; sourceTree = "<group>"; };
+		6B96A8A816ACCF1800BB20CD /* TableTopicUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTopicUICollectionViewController.h; sourceTree = "<group>"; };
+		6B96A8A916ACCF1800BB20CD /* TableTopicUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicUICollectionViewController.m; sourceTree = "<group>"; };
+		6B96A8AB16ACD8F800BB20CD /* TableTopicUICollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTopicUICollectionCell.h; sourceTree = "<group>"; };
+		6B96A8AC16ACD8F800BB20CD /* TableTopicUICollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicUICollectionCell.m; sourceTree = "<group>"; };
 		6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2dCF2ae.jpg; sourceTree = "<group>"; };
 		6BBA914F16A11FE700DBE0E5 /* card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +161,10 @@
 				4415E1B61694D90300DA478F /* AddTableTopicController.m */,
 				4415E1C11695E2E400DA478F /* EditTableTopicsTableViewController.h */,
 				4415E1C21695E2E400DA478F /* EditTableTopicsTableViewController.m */,
+				6B96A8A816ACCF1800BB20CD /* TableTopicUICollectionViewController.h */,
+				6B96A8A916ACCF1800BB20CD /* TableTopicUICollectionViewController.m */,
+				6B96A8AB16ACD8F800BB20CD /* TableTopicUICollectionCell.h */,
+				6B96A8AC16ACD8F800BB20CD /* TableTopicUICollectionCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -332,6 +342,8 @@
 				443593531691F18100721B65 /* TableTopicCoreDataService.m in Sources */,
 				4415E1B71694D90300DA478F /* AddTableTopicController.m in Sources */,
 				4415E1C31695E2E400DA478F /* EditTableTopicsTableViewController.m in Sources */,
+				6B96A8AA16ACCF1800BB20CD /* TableTopicUICollectionViewController.m in Sources */,
+				6B96A8AD16ACD8F800BB20CD /* TableTopicUICollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,7 +57,7 @@
                                 <action selector="pressResetButton:" destination="2" id="fau-VT-qXI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="XZH-qE-9Ee">
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="XZH-qE-9Ee">
                             <connections>
                                 <segue destination="yPH-al-4SU" kind="push" id="9ZT-Vc-Hga"/>
                             </connections>
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="635" y="69"/>
         </scene>
-        <!--Edit Menu View Controller - Edit-->
+        <!--Edit Menu View Controller - Menu-->
         <scene sceneID="e6t-Kz-mKX">
             <objects>
                 <viewController id="yPH-al-4SU" customClass="EditMenuViewController" sceneMemberID="viewController">
@@ -130,10 +130,37 @@
                                     <segue destination="2fM-ED-NJu" kind="push" id="BX9-sG-2cf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swG-W9-jFT">
+                                <rect key="frame" x="117" y="274" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="13W-A2-z5i">
+                                <rect key="frame" x="117" y="274" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Pdi-p6-wvg" kind="push" id="Vvb-e8-cRq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit" id="0xZ-Bh-GTK"/>
+                    <navigationItem key="navigationItem" title="Menu" id="0xZ-Bh-GTK"/>
                     <connections>
                         <outlet property="membersButton" destination="44G-c7-pd5" id="WM9-tt-qWK"/>
                         <outlet property="tableTopicButton" destination="4Df-Or-lSQ" id="7rd-x7-Xu0"/>
@@ -142,6 +169,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEu-03-dun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="63"/>
+        </scene>
+        <!--Table TopicUI Collection View Controller-->
+        <scene sceneID="jCm-1P-QxS">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Pdi-p6-wvg" customClass="TableTopicUICollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mGL-bM-tdE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzr-tS-TaR">
+                            <size key="itemSize" width="273" height="237"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicCell" id="rA9-OE-QW2" customClass="TableTopicUICollectionCell">
+                                <rect key="frame" x="23" y="0.0" width="273" height="237"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="237"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tag.jpg" id="juY-oR-ZXH">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="237"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Pdi-p6-wvg" id="TjK-Oc-Iql"/>
+                            <outlet property="delegate" destination="Pdi-p6-wvg" id="XkE-C4-4fM"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="kBw-wJ-0uJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mGL-bM-tdE" id="Pxl-K7-190"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCi-FZ-77N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="838"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rxC-M5-heh">
@@ -384,9 +456,86 @@
     </scenes>
     <resources>
         <image name="2dCF2ae.jpg" width="600" height="449"/>
+        <image name="tag.jpg" width="1080" height="772"/>
         <image name="tag1.png" width="1080" height="772"/>
         <image name="woodenblock.png" width="259" height="194"/>
     </resources>
+    <classes>
+        <class className="AddMemberController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddMemberController.h"/>
+            <relationships>
+                <relationship kind="action" name="addMember:" candidateClass="UIButton"/>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="dismissFirstNameKeyboard:" candidateClass="UITextField"/>
+                <relationship kind="action" name="dismissLastNameKeyboard:" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="memberSubmitButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="AddTableTopicController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableTopicController.h"/>
+            <relationships>
+                <relationship kind="action" name="createTableTopic:"/>
+                <relationship kind="outlet" name="tableTopicField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="topicSubmitButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EditMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="membersButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableTopicButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EditNameTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditNameTableViewController.h"/>
+        </class>
+        <class className="EditTableTopicsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditTableTopicsTableViewController.h"/>
+        </class>
+        <class className="TableTopicUICollectionCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableTopicUICollectionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="topicImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TableTopicUICollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableTopicUICollectionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="Table_TopicsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Table_TopicsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeNameLabel:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="action" name="changeTopicLabel:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="action" name="pressPickTopic:" candidateClass="UIButton"/>
+                <relationship kind="action" name="pressResetButton:"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="topicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="topicView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
