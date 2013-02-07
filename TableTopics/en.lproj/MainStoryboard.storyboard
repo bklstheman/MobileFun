@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Table Topics View Controller - Table Topics-->
@@ -153,8 +153,20 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kNc-vv-oKn">
+                                <rect key="frame" x="117" y="274" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="Pdi-p6-wvg" kind="push" id="Vvb-e8-cRq"/>
+                                    <segue destination="uZu-Ur-sPU" kind="push" id="FUG-hT-NNb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -169,51 +181,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEu-03-dun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="63"/>
-        </scene>
-        <!--Table TopicUI Collection View Controller-->
-        <scene sceneID="jCm-1P-QxS">
-            <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Pdi-p6-wvg" customClass="TableTopicUICollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mGL-bM-tdE">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzr-tS-TaR">
-                            <size key="itemSize" width="273" height="237"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicCell" id="rA9-OE-QW2" customClass="TableTopicUICollectionCell">
-                                <rect key="frame" x="23" y="0.0" width="273" height="237"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="273" height="237"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tag.jpg" id="juY-oR-ZXH">
-                                            <rect key="frame" x="0.0" y="0.0" width="279" height="237"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Pdi-p6-wvg" id="TjK-Oc-Iql"/>
-                            <outlet property="delegate" destination="Pdi-p6-wvg" id="XkE-C4-4fM"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="kBw-wJ-0uJ"/>
-                    <connections>
-                        <outlet property="collectionView" destination="mGL-bM-tdE" id="Pxl-K7-190"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cCi-FZ-77N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1224" y="838"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rxC-M5-heh">
@@ -238,6 +205,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bre-uF-Sja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="259" y="69"/>
+        </scene>
+        <!--Topics Collection View Controller-->
+        <scene sceneID="iZS-el-W9F">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="uZu-Ur-sPU" customClass="TopicsCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="4MB-gI-rzk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zGz-uz-Bqd">
+                            <size key="itemSize" width="224" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicCell" id="1Es-D7-jzf" customClass="TopicsCollectionViewCell">
+                                <rect key="frame" x="48" y="0.0" width="224" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="224" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="Q6x-ez-0oY">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="180"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lvn-8u-wbq">
+                                            <rect key="frame" x="10" y="45" width="204" height="109"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="tableTopicText" destination="lvn-8u-wbq" id="GQS-nd-Vbl"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uZu-Ur-sPU" id="2yd-oj-MfV"/>
+                            <outlet property="delegate" destination="uZu-Ur-sPU" id="Zc9-Ni-OH2"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="FjF-EM-vyC"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4MB-gI-rzk" id="c2x-Fy-aeP"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-H3-uWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="774"/>
         </scene>
         <!--Edit Table Topics Table View Controller - Table Topics-->
         <scene sceneID="Ucu-SD-byN">
@@ -456,7 +478,6 @@
     </scenes>
     <resources>
         <image name="2dCF2ae.jpg" width="600" height="449"/>
-        <image name="tag.jpg" width="1080" height="772"/>
         <image name="tag1.png" width="1080" height="772"/>
         <image name="woodenblock.png" width="259" height="194"/>
     </resources>
@@ -478,6 +499,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableTopicController.h"/>
             <relationships>
                 <relationship kind="action" name="createTableTopic:"/>
+                <relationship kind="action" name="textViewResign:"/>
                 <relationship kind="outlet" name="tableTopicField" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="topicSubmitButton" candidateClass="UIButton"/>
             </relationships>
@@ -495,18 +517,6 @@
         <class className="EditTableTopicsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditTableTopicsTableViewController.h"/>
         </class>
-        <class className="TableTopicUICollectionCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableTopicUICollectionCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="topicImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TableTopicUICollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableTopicUICollectionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
         <class className="Table_TopicsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Table_TopicsViewController.h"/>
             <relationships>
@@ -518,6 +528,18 @@
                 <relationship kind="outlet" name="nameView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="topicLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="topicView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TopicsCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TopicsCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableTopicText" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TopicsCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TopicsCollectionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">

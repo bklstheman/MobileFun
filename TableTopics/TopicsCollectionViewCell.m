@@ -1,18 +1,16 @@
 //
-//  TableTopicUICollectionCell.m
+//  TopicsCollectionViewCell.m
 //  TableTopics
 //
-//  Created by William Kluss on 1/20/13.
+//  Created by William Kluss on 2/6/13.
 //
 //
 
-#import "TableTopicUICollectionCell.h"
-#import <QuartzCore/QuartzCore.h>
+#import "TopicsCollectionViewCell.h"
 
-@implementation TableTopicUICollectionCell
+@implementation TopicsCollectionViewCell
 
-@synthesize topicImageView;
-@synthesize topicDescription;
+@synthesize tableTopicText;
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -1,15 +1,18 @@
 //
-//  TableTopicUICollectionViewController.h
+//  TopicsCollectionViewController.h
 //  TableTopics
 //
-//  Created by William Kluss on 1/20/13.
+//  Created by William Kluss on 2/6/13.
 //
 //
 
 #import <UIKit/UIKit.h>
 #import "TableTopicCoreDataService.h"
+#import "TopicsCollectionViewCell.h"
 
-@interface TableTopicUICollectionViewController : UICollectionViewController<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@interface TopicsCollectionViewController : UICollectionViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+
 
 @property(strong, nonatomic) NSMutableArray *tableTopicArray;
 @property(strong, nonatomic) TableTopicCoreDataService *coreDataService;

@@ -1,22 +1,21 @@
 //
-//  TableTopicUICollectionViewController.m
+//  TopicsCollectionViewController.m
 //  TableTopics
 //
-//  Created by William Kluss on 1/20/13.
+//  Created by William Kluss on 2/6/13.
 //
 //
 
-#import "TableTopicUICollectionViewController.h"
+#import "TopicsCollectionViewController.h"
 
-@interface TableTopicUICollectionViewController ()
+@interface TopicsCollectionViewController ()
 
 @end
 
-@implementation TableTopicUICollectionViewController
+@implementation TopicsCollectionViewController
 
 @synthesize tableTopicArray;
 @synthesize coreDataService;
-@synthesize collectionView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,15 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.coreDataService = [[TableTopicCoreDataService alloc]init];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TopicCell"];
+    self.coreDataService = [TableTopicCoreDataService new];
+    [self.collectionView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"2dCF2ae.jpg"]]];
+    
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tableTopicArray = [coreDataService getAllTableTopics];
-   
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,29 +54,17 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return [self.tableTopicArray count];
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TopicCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+    TopicsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TopicCell" forIndexPath:indexPath];
+    //cell.backgroundColor = [UIColor blueColor];
+    TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:indexPath.row];
+    cell.tableTopicText.text = tableTopicVO.topicDescription;
     return cell;
 }
-
-#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //TODO
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //TODO
-}
-
-
 
 - (void)viewDidUnload {
     [self setCollectionView:nil];
