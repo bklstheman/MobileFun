@@ -70,4 +70,8 @@
     [self setCollectionView:nil];
     [super viewDidUnload];
 }
+
+- (IBAction)deleteTableTopic:(UIButton *)sender {
+    //[self.collectionView sele]
+}
 @end
