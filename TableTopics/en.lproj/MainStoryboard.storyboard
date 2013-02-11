@@ -499,7 +499,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableTopicController.h"/>
             <relationships>
                 <relationship kind="action" name="createTableTopic:"/>
-                <relationship kind="action" name="textViewResign:"/>
                 <relationship kind="outlet" name="tableTopicField" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="topicSubmitButton" candidateClass="UIButton"/>
             </relationships>
@@ -553,9 +552,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
