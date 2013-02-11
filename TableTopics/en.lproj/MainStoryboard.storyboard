@@ -127,46 +127,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2fM-ED-NJu" kind="push" id="BX9-sG-2cf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swG-W9-jFT">
-                                <rect key="frame" x="117" y="274" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="13W-A2-z5i">
-                                <rect key="frame" x="117" y="274" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kNc-vv-oKn">
-                                <rect key="frame" x="117" y="274" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uZu-Ur-sPU" kind="push" id="FUG-hT-NNb"/>
+                                    <segue destination="uZu-Ur-sPU" kind="push" id="jjw-hg-5U9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,32 +175,32 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zGz-uz-Bqd">
-                            <size key="itemSize" width="224" height="180"/>
+                            <size key="itemSize" width="296" height="213"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicCell" id="1Es-D7-jzf" customClass="TopicsCollectionViewCell">
-                                <rect key="frame" x="48" y="0.0" width="224" height="180"/>
+                                <rect key="frame" x="10" y="0.0" width="300" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="224" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="Q6x-ez-0oY">
-                                            <rect key="frame" x="0.0" y="0.0" width="224" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="213"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="lvn-8u-wbq">
-                                            <rect key="frame" x="10" y="45" width="204" height="109"/>
+                                            <rect key="frame" x="20" y="62" width="266" height="109"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="dn0-qS-o1A">
-                                            <rect key="frame" x="183" y="12" width="29" height="29"/>
+                                            <rect key="frame" x="260" y="18" width="29" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal">
@@ -250,13 +211,14 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="deleteTableTopic:" destination="uZu-Ur-sPU" eventType="touchUpInside" id="jb3-Xy-stt"/>
+                                                <action selector="deleteTopicCollectionCell:" destination="1Es-D7-jzf" eventType="touchUpInside" id="AAY-gF-pd5"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="300" height="213"/>
                                 <connections>
                                     <outlet property="tableTopicText" destination="lvn-8u-wbq" id="GQS-nd-Vbl"/>
                                 </connections>
@@ -267,59 +229,20 @@
                             <outlet property="delegate" destination="uZu-Ur-sPU" id="Zc9-Ni-OH2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="FjF-EM-vyC"/>
+                    <navigationItem key="navigationItem" id="FjF-EM-vyC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vwg-Az-Nbo">
+                            <connections>
+                                <segue destination="ZRq-tu-dqj" kind="push" id="70L-Gg-Cc8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4MB-gI-rzk" id="c2x-Fy-aeP"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-H3-uWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="774"/>
-        </scene>
-        <!--Edit Table Topics Table View Controller - Table Topics-->
-        <scene sceneID="Ucu-SD-byN">
-            <objects>
-                <tableViewController id="2fM-ED-NJu" customClass="EditTableTopicsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="beS-aj-HMk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EiW-pM-aw0" rowHeight="166" style="IBUITableViewCellStyleDefault" id="eaO-hZ-dI6">
-                                <rect key="frame" x="0.0" y="46" width="320" height="167"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="300" height="165"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EiW-pM-aw0">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="165"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="2fM-ED-NJu" id="aoi-Eu-Uoj"/>
-                            <outlet property="delegate" destination="2fM-ED-NJu" id="MYC-Qp-IMk"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Table Topics" id="Zed-PZ-oyA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IsI-Ip-NIz">
-                            <connections>
-                                <segue destination="ZRq-tu-dqj" kind="push" identifier="AddTopicSegue" id="cW9-pj-S8m"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B5f-dx-RQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1566" y="337"/>
+            <point key="canvasLocation" x="1541" y="340"/>
         </scene>
         <!--Add Table Topic Controller - Add Topic-->
         <scene sceneID="OfE-cF-7CD">
@@ -387,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN4-K2-fhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2040" y="337"/>
+            <point key="canvasLocation" x="2082" y="325"/>
         </scene>
         <!--Add Member Controller - Add Member-->
         <scene sceneID="XuF-Zp-OSX">
@@ -452,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKP-zV-y6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="-335"/>
+            <point key="canvasLocation" x="2072" y="-349"/>
         </scene>
         <!--Edit Name Table View Controller - Members-->
         <scene sceneID="MJH-Qx-LIP">
@@ -488,7 +411,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmP-n7-fPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="-335"/>
+            <point key="canvasLocation" x="1560" y="-349"/>
         </scene>
     </scenes>
     <resources>
@@ -528,9 +451,6 @@
         <class className="EditNameTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditNameTableViewController.h"/>
         </class>
-        <class className="EditTableTopicsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditTableTopicsTableViewController.h"/>
-        </class>
         <class className="Table_TopicsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Table_TopicsViewController.h"/>
             <relationships>
@@ -547,6 +467,7 @@
         <class className="TopicsCollectionViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TopicsCollectionViewCell.h"/>
             <relationships>
+                <relationship kind="action" name="deleteTopicCollectionCell:"/>
                 <relationship kind="outlet" name="tableTopicText" candidateClass="UITextView"/>
             </relationships>
         </class>

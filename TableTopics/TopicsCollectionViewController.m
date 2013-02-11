@@ -22,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -38,6 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tableTopicArray = [coreDataService getAllTableTopics];
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +65,8 @@
     //cell.backgroundColor = [UIColor blueColor];
     TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:indexPath.row];
     cell.tableTopicText.text = tableTopicVO.topicDescription;
+    cell.topicCellIndex = indexPath;
+    cell.delegate = self;
     return cell;
 }
 
@@ -71,7 +75,14 @@
     [super viewDidUnload];
 }
 
-- (IBAction)deleteTableTopic:(UIButton *)sender {
-    //[self.collectionView sele]
+-(void)deleteTopicCell:(TopicsCollectionViewCell *)topicCell
+{
+    //Delete from core data, fetch new array, and display.
+    TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:topicCell.topicCellIndex.row];
+    [self.coreDataService removeTableTopic:tableTopicVO];
+    
+    [self.tableTopicArray removeObjectAtIndex:topicCell.topicCellIndex.row];
+    [self.collectionView deleteItemsAtIndexPaths:@[topicCell.topicCellIndex]];
+    [self.collectionView reloadData];
 }
 @end

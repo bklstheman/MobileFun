@@ -10,7 +10,7 @@
 
 @implementation TopicsCollectionViewCell
 
-@synthesize tableTopicText;
+@synthesize tableTopicText, delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,6 +21,8 @@
     return self;
 }
 
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -30,5 +32,7 @@
 }
 */
 
-
+- (IBAction)deleteTopicCollectionCell:(id)sender {
+    [self.delegate deleteTopicCell:self];
+}
 @end
