@@ -17,4 +17,5 @@
 @property(strong, nonatomic) NSMutableArray *tableTopicArray;
 @property(strong, nonatomic) TableTopicCoreDataService *coreDataService;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+- (IBAction)deleteTableTopic:(UIButton *)sender;
 @end
