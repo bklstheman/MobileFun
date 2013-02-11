@@ -14,16 +14,11 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
-@property (strong, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) TableTopicCoreDataService *coreDataService;
-@property (weak, nonatomic) IBOutlet UIButton *memberSubmitButton;
 
 - (IBAction)dismissFirstNameKeyboard:(UITextField *)sender;
 - (IBAction)dismissLastNameKeyboard:(UITextField *)sender;
-- (IBAction)addMember:(UIButton *)sender;
-
-//TODO:Make this a "private" method
--(void)addEmptyLabelMessage;
+- (IBAction)addMember:(id)sender;
 
 - (IBAction)backgroundTap:(id)sender;
 @end

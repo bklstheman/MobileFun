@@ -17,7 +17,6 @@
 
 @synthesize firstNameTextField;
 @synthesize lastNameTextField;
-@synthesize memberSubmitButton;
 @synthesize coreDataService;
 
 
@@ -34,9 +33,6 @@
 {
     [super viewDidLoad];
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
-    
-    self.memberSubmitButton.layer.borderWidth = 1;
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,8 +44,6 @@
 - (void)viewDidUnload {
     [self setFirstNameTextField:nil];
     [self setLastNameTextField:nil];
-    [self setSubmitButton:nil];
-    [self setMemberSubmitButton:nil];
     [super viewDidUnload];
 }
 
@@ -61,7 +55,7 @@
     [self resignFirstResponder];
 }
 
-- (IBAction)addMember:(UIButton *)sender {
+- (IBAction)addMember:(id)sender {
     if([self.firstNameTextField.text length] == 0 || [self.lastNameTextField.text length] == 0){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You must fill out all the fields." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -199,11 +199,11 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="dn0-qS-o1A">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dn0-qS-o1A">
                                             <rect key="frame" x="260" y="18" width="29" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <state key="normal">
+                                            <state key="normal" image="circlex.png">
                                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -257,55 +257,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="vsg-uh-Hun">
-                                <rect key="frame" x="1" y="-5" width="300" height="213"/>
+                                <rect key="frame" x="10" y="48" width="300" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wjb-Md-Jvb">
-                                <rect key="frame" x="114" y="216" width="75" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createTableTopic:" destination="ZRq-tu-dqj" eventType="touchUpInside" id="cCh-gq-rT9"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter in Text" id="qqw-Q9-v6m">
-                                <rect key="frame" x="20" y="41" width="263" height="132"/>
+                                <rect key="frame" x="29" y="94" width="263" height="132"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="ZRq-tu-dqj" id="3n3-QD-AQf"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dkM-Ti-poN">
-                                <rect key="frame" x="114" y="216" width="75" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit" backgroundImage="woodenblock.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createTableTopic:" destination="ZRq-tu-dqj" eventType="touchUpInside" id="89i-wm-65V"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Topic" id="H35-Ri-aMB"/>
+                    <navigationItem key="navigationItem" title="Add Topic" id="H35-Ri-aMB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2k8-bq-AVl">
+                            <connections>
+                                <action selector="createTableTopic:" destination="ZRq-tu-dqj" id="JAx-Qa-af8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableTopicField" destination="qqw-Q9-v6m" id="sxu-f1-mSS"/>
-                        <outlet property="topicSubmitButton" destination="dkM-Ti-poN" id="ulj-KF-daa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN4-K2-fhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -325,7 +300,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" id="lw7-nQ-jQl">
-                                <rect key="frame" x="51" y="53" width="219" height="30"/>
+                                <rect key="frame" x="51" y="103" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
@@ -334,7 +309,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" id="zgp-PT-udG">
-                                <rect key="frame" x="51" y="104" width="219" height="30"/>
+                                <rect key="frame" x="51" y="156" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
@@ -342,21 +317,6 @@
                                     <action selector="dismissLastNameKeyboard:" destination="CR6-dS-AtK" eventType="editingDidEndOnExit" id="2T2-NE-AGe"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P7A-XP-0Qh">
-                                <rect key="frame" x="123" y="186" width="75" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit" backgroundImage="woodenblock.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addMember:" destination="CR6-dS-AtK" eventType="touchUpInside" id="mR7-1f-2Ew"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -365,12 +325,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Member" id="OkY-a0-5Xu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="9q4-YS-wne"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MQZ-nX-2du">
+                            <connections>
+                                <action selector="addMember:" destination="CR6-dS-AtK" id="PDk-Yw-pMo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="firstNameTextField" destination="lw7-nQ-jQl" id="L5c-U2-R4j"/>
                         <outlet property="lastNameTextField" destination="zgp-PT-udG" id="bEa-Ut-yjG"/>
-                        <outlet property="memberSubmitButton" destination="P7A-XP-0Qh" id="7gl-wu-8Eu"/>
-                        <outlet property="submitButton" destination="P7A-XP-0Qh" id="KEQ-CJ-Rcq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKP-zV-y6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,6 +379,7 @@
     </scenes>
     <resources>
         <image name="2dCF2ae.jpg" width="600" height="449"/>
+        <image name="circlex.png" width="28" height="28"/>
         <image name="tag1.png" width="1080" height="772"/>
         <image name="woodenblock.png" width="259" height="194"/>
     </resources>
@@ -423,14 +387,12 @@
         <class className="AddMemberController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddMemberController.h"/>
             <relationships>
-                <relationship kind="action" name="addMember:" candidateClass="UIButton"/>
+                <relationship kind="action" name="addMember:"/>
                 <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="dismissFirstNameKeyboard:" candidateClass="UITextField"/>
                 <relationship kind="action" name="dismissLastNameKeyboard:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memberSubmitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="AddTableTopicController" superclassName="UIViewController">
@@ -438,7 +400,6 @@
             <relationships>
                 <relationship kind="action" name="createTableTopic:"/>
                 <relationship kind="outlet" name="tableTopicField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="topicSubmitButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="EditMenuViewController" superclassName="UIViewController">
@@ -488,6 +449,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

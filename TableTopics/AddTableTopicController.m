@@ -15,7 +15,6 @@
 @implementation AddTableTopicController
 
 @synthesize tableTopicField;
-@synthesize topicSubmitButton;
 @synthesize coreDataService;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,7 +30,6 @@
 {
     [super viewDidLoad];
     self.tableTopicField.backgroundColor = [UIColor clearColor];
-    self.topicSubmitButton.layer.borderWidth = 1;
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
 
     // Do any additional setup after loading the view.
@@ -45,7 +43,6 @@
 
 - (void)viewDidUnload {
     [self setTableTopicField:nil];
-    [self setTopicSubmitButton:nil];
     [super viewDidUnload];
 }
 
@@ -54,7 +51,7 @@
 {
     
     //Put this in a new method
-    UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+    /*UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     
     [toolbar setBarStyle:UIBarStyleBlackTranslucent];
     [toolbar sizeToFit];
@@ -64,7 +61,7 @@
     
     NSArray *itemsArray = [NSArray arrayWithObjects:flexButton, doneButton, nil];
     [toolbar setItems:itemsArray];
-    [textView setInputAccessoryView:toolbar];
+    [textView setInputAccessoryView:toolbar];*/
     
     //Remove the Enter in Text value
     
@@ -74,9 +71,14 @@
     return YES;
 }
 
-- (IBAction)textViewResign:(id)sender
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    [self.tableTopicField resignFirstResponder];
+    if([text isEqualToString:@"\n"]){
+        [self.tableTopicField resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 - (IBAction)createTableTopic:(id)sender {
