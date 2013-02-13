@@ -18,7 +18,6 @@
 {
     // Override point for customization after application launch.
     [application setApplicationSupportsShakeToEdit:YES];
-    //TODO Might need something here.
     return YES;
 }
 							

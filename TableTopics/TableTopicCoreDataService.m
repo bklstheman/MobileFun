@@ -61,15 +61,10 @@
     NSMutableArray *memberArray = [[NSMutableArray alloc]init];
     [self.fetchedResultsController performFetch:&error];
 
-    //If something happen with the search we will just sent an empty array.
-    //TODO:I am not sure of what the best way to go about this. I'm not sure what could cause the fetch to fail,
-    //so I am not sure if we want to return nothing, or send an error back to the user.
-    //Some research needs to be done about this type of error.
     if(error){
-        return memberArray;
+        return nil;
     }
     
-    //TODO:Might need to break this down since its kinda...long.
     [memberArray addObjectsFromArray:[self populateMemberVOArray:[self.fetchedResultsController fetchedObjects]]];
     return memberArray;
 }
@@ -93,15 +88,10 @@
     NSMutableArray *selectedMemberArray = [[NSMutableArray alloc]init];
     [self.fetchedResultsController performFetch:&error];
     
-    //If something happen with the search we will just sent an empty array.
-    //TODO:I am not sure of what the best way to go about this. I'm not sure what could cause the fetch to fail,
-    //so I am not sure if we want to return nothing, or send an error back to the user.
-    //Some research needs to be done about this type of error.
     if(error){
-        return selectedMemberArray;
+        return nil;
     }
     
-    //TODO:Might need to break this down since its kinda...long.
     [selectedMemberArray addObjectsFromArray:[self populateMemberVOArray:[self.fetchedResultsController fetchedObjects]]];
     return selectedMemberArray;
 }
@@ -124,6 +114,10 @@
     
     NSError *error;
     [self.fetchedResultsController performFetch:&error];
+    
+    if(error){
+        return nil;
+    }
     
     NSArray *fetchedResults = [self.fetchedResultsController fetchedObjects];
     
@@ -188,7 +182,6 @@
 
 -(void) removeTableTopic:(TableTopicVO *)tableTopicVO
 {
-    //TODO: Move this to a new method. One that selects a topic by description.    
     NSFetchRequest *fetch = [[NSFetchRequest alloc]init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"TableTopic" inManagedObjectContext:self.managedObjectContext];
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"topicDescription = %@", tableTopicVO.topicDescription]];

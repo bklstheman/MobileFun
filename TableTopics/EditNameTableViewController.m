@@ -188,7 +188,6 @@
     
     [coreDataService editIsSelect:memberVO];
     
-    //TODO Change this logic. There is a better way but it will take a bit longer to write. I just want this done, NOW.
     if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
         memberVO.isMemberSelected = [NSNumber numberWithBool:FALSE];
     } else {
