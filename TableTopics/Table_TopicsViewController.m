@@ -47,7 +47,14 @@
 
 - (void)createNameValues
 {
-    self.nameArray = [coreDataService getAllSelectedMembers];
+    NSError *error;
+    self.nameArray = [coreDataService getAllSelectedMembersWithError:error];
+    
+    if(self.nameArray == nil){
+        if(error){
+            //TODO: Display an alert
+        }
+    }
 }
 
 - (void)createTopicValues

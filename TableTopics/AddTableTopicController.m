@@ -48,21 +48,7 @@
 
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)textView
-{
-    
-    //Put this in a new method
-    /*UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
-    
-    [toolbar setBarStyle:UIBarStyleBlackTranslucent];
-    [toolbar sizeToFit];
-    
-    UIBarButtonItem *flexButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-    UIBarButtonItem *doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(textViewResign:)];
-    
-    NSArray *itemsArray = [NSArray arrayWithObjects:flexButton, doneButton, nil];
-    [toolbar setItems:itemsArray];
-    [textView setInputAccessoryView:toolbar];*/
-    
+{    
     //Remove the Enter in Text value
     
     if(textView.text )
@@ -94,10 +80,14 @@
     } else {
         NSString *tableTopicDescrip = [self.tableTopicField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
-        [coreDataService createTableTopic:tableTopicDescrip];
-        //TODO:Need to check to see if an error comes back from this. If so we will need to display an error.
+        NSError *error;
+        BOOL response = [coreDataService createTableTopic:tableTopicDescrip withError:error];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        if (response) {
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            //TODO:NEed to do alert thing
+        }
     }
 }
 @end

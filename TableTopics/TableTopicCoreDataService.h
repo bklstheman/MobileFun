@@ -17,14 +17,14 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
--(NSMutableArray *) getAllMembers;
--(NSMutableArray *) getAllSelectedMembers;
--(NSMutableArray *) getAllTableTopics;
--(void) removeMember:(MemberVO *) memberVO;
--(void) editIsSelect:(MemberVO *) memberVO;
--(void) createMember:(MemberVO *) memberVO;
--(void) createTableTopic:(NSString *) tableTopicDescription;
--(void) removeTableTopic:(TableTopicVO *) tableTopicVO;
+-(NSMutableArray *) getAllMembersWithError:(NSError *)error;
+-(NSMutableArray *) getAllSelectedMembersWithError:(NSError *)error;
+-(NSMutableArray *) getAllTableTopicsWithError:(NSError *)error;
+-(BOOL) removeMember:(MemberVO *) memberVO withError:(NSError *)error;
+-(BOOL) editIsSelect:(MemberVO *) memberVO withError:(NSError *)error;
+-(BOOL) createMember:(MemberVO *) memberVO withError:(NSError *)error;
+-(BOOL) createTableTopic:(NSString *) tableTopicDescription withError:(NSError *)error;
+-(BOOL) removeTableTopic:(TableTopicVO *) tableTopicVO withError:(NSError *)error;
 
 -(void)saveContext;
 -(NSURL *)applicationDocumentsDirectory;

@@ -41,7 +41,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize fetchedResultsController = _fetchedResultsController;
 
--(NSMutableArray *) getAllMembers
+-(NSMutableArray *) getAllMembersWithError:(NSError *)error
 {
     NSManagedObjectContext *moc = [[[TableTopicCoreDataService alloc]init] managedObjectContext];
     
@@ -57,7 +57,6 @@
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetch managedObjectContext:moc sectionNameKeyPath:nil cacheName:@"MembersCache"];
     
-    NSError *error;
     NSMutableArray *memberArray = [[NSMutableArray alloc]init];
     [self.fetchedResultsController performFetch:&error];
 
@@ -69,7 +68,7 @@
     return memberArray;
 }
 
--(NSMutableArray *) getAllSelectedMembers
+-(NSMutableArray *) getAllSelectedMembersWithError:(NSError *)error
 {
     NSManagedObjectContext *moc = [[[TableTopicCoreDataService alloc]init] managedObjectContext];
     
@@ -84,7 +83,6 @@
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetch managedObjectContext:moc sectionNameKeyPath:nil cacheName:@"MembersCache"];
     
-    NSError *error;
     NSMutableArray *selectedMemberArray = [[NSMutableArray alloc]init];
     [self.fetchedResultsController performFetch:&error];
     
@@ -96,7 +94,7 @@
     return selectedMemberArray;
 }
 
--(NSMutableArray *) getAllTableTopics
+-(NSMutableArray *) getAllTableTopicsWithError:(NSError *)error
 {
     NSManagedObjectContext *moc = [[[TableTopicCoreDataService alloc]init] managedObjectContext];
     
@@ -112,7 +110,6 @@
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetch managedObjectContext:moc sectionNameKeyPath:nil cacheName:@"TableTopicCache"];
     
-    NSError *error;
     [self.fetchedResultsController performFetch:&error];
     
     if(error){
@@ -133,19 +130,20 @@
     return tableTopicsArray;
 }
 
--(void) removeMember:(MemberVO *)member;
+-(BOOL) removeMember:(MemberVO *)member withError:(NSError *)error;
 {
-    NSError *error;
     Member *memberToDelete = (Member *)[self.managedObjectContext existingObjectWithID:member.objectId error:&error];
     
     [self.managedObjectContext deleteObject:memberToDelete];
     
     if(![self.managedObjectContext save:&error]){
-        NSLog(@"Error %@", [error localizedFailureReason]);
+        return false;
+        //NSLog(@"Error %@", [error localizedFailureReason]);
     }
+    return true;
 }
 
--(void) createMember:(MemberVO *) memberVO
+-(BOOL) createMember:(MemberVO *) memberVO withError:(NSError *)error
 {
     Member *newMember = (Member *)[NSEntityDescription insertNewObjectForEntityForName:@"Member" inManagedObjectContext:self.managedObjectContext];
     
@@ -153,13 +151,17 @@
     newMember.lastName = memberVO.lastName;
     newMember.isMemberSelected = [NSNumber numberWithBool:FALSE];
     
-    NSError *error;
-    [self.managedObjectContext save:&error];
+    if(![self.managedObjectContext save:&error]){
+        return false;
+        //NSLog(@"Error %@", [error localizedFailureReason]);
+    }
+    return true;
 }
 
--(void) editIsSelect:(MemberVO *) memberVO
+-(BOOL) editIsSelect:(MemberVO *) memberVO withError:(NSError *)error
 {
-    NSError *error;
+    
+    //TODO:Need to use different key then managedObjectContext.
     Member *memberToUpdate = (Member *)[self.managedObjectContext existingObjectWithID:memberVO.objectId error:&error];
            
     if([memberVO.isMemberSelected isEqualToNumber:[NSNumber numberWithBool:FALSE]]){
@@ -167,20 +169,30 @@
     } else {
         memberToUpdate.isMemberSelected = [NSNumber numberWithBool:FALSE];
     }
-    [self.managedObjectContext save:&error];
+    
+    if(![self.managedObjectContext save:&error]){
+        return false;
+        //NSLog(@"Error %@", [error localizedFailureReason]);
+    }
+    
+    return true;
 }
 
--(void) createTableTopic:(NSString *) tableTopicDescription
+-(BOOL) createTableTopic:(NSString *) tableTopicDescription withError:(NSError *)error
 {
     TableTopic *newTableTopic = (TableTopic *)[NSEntityDescription insertNewObjectForEntityForName:@"TableTopic" inManagedObjectContext:self.managedObjectContext];
     
     newTableTopic.topicDescription = tableTopicDescription;
     
-    NSError *error;
-    [self.managedObjectContext save:&error];
+    if(![self.managedObjectContext save:&error]){
+        return false;
+        //NSLog(@"Error %@", [error localizedFailureReason]);
+    }
+    
+    return true;
 }
 
--(void) removeTableTopic:(TableTopicVO *)tableTopicVO
+-(BOOL) removeTableTopic:(TableTopicVO *)tableTopicVO withError:(NSError*) error
 {
     NSFetchRequest *fetch = [[NSFetchRequest alloc]init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"TableTopic" inManagedObjectContext:self.managedObjectContext];
@@ -188,7 +200,6 @@
     [fetch setEntity:entity];
 
     
-    NSError *error;    
     NSArray *fetchedResults = [self.managedObjectContext executeFetchRequest:fetch error:&error];
     
     TableTopic *tableTopicToRemove = [fetchedResults objectAtIndex:0];
@@ -198,6 +209,8 @@
     if(![self.managedObjectContext save:&error]){
         NSLog(@"Error %@", [error localizedFailureReason]);
     }
+    
+    return true;
 }
 
 

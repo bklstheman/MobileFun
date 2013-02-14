@@ -40,7 +40,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.nameArray = [coreDataService getAllMembers];
+    NSError *error;
+    self.nameArray = [coreDataService getAllMembersWithError:error];
+    
+    if(self.nameArray == nil){
+        if(error){
+            //TODO:Display error
+        }
+    }
     
     if(self.nameArray.count == 0){
         //create the message on the board.
@@ -147,13 +154,19 @@
         // Delete the row from the data source       
         MemberVO *memberVO = [self.nameArray objectAtIndex:indexPath.row];
         
-        [coreDataService removeMember:memberVO];
+        NSError *error;
+        BOOL response = [coreDataService removeMember:memberVO withError:error];
         
-        [self.nameArray removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-        if (self.nameArray.count == 0) {
-            [self addEmptyLabelMessage];
+        if(response){
+            [self.nameArray removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            if (self.nameArray.count == 0) {
+                [self addEmptyLabelMessage];
+            }
+            
+        } else {
+            //TODO print alert
         }
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -186,17 +199,22 @@
 
     MemberVO *memberVO = [self.nameArray objectAtIndex:indexPath.row];
     
-    [coreDataService editIsSelect:memberVO];
+    NSError *error;
+    BOOL response = [coreDataService editIsSelect:memberVO withError:error];
     
-    if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
-        memberVO.isMemberSelected = [NSNumber numberWithBool:FALSE];
+    if(response){
+        if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
+            memberVO.isMemberSelected = [NSNumber numberWithBool:FALSE];
+        } else {
+            memberVO.isMemberSelected = [NSNumber numberWithBool:TRUE];
+        }
+        
+        [self.nameArray replaceObjectAtIndex:indexPath.row withObject:memberVO];
+        [cell setSelected:NO];
+        [tableView reloadData];
     } else {
-        memberVO.isMemberSelected = [NSNumber numberWithBool:TRUE];
+        //TODO:Display alert
     }
-    
-    [self.nameArray replaceObjectAtIndex:indexPath.row withObject:memberVO];
-    [cell setSelected:NO];
-    [tableView reloadData];
 }
 
 @end

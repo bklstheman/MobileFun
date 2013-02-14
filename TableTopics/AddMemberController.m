@@ -65,10 +65,15 @@
         memberVO.firstName = [firstNameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         memberVO.lastName = [lastNameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
-        [coreDataService createMember:memberVO];
-        //TODO:Need to check to see if an error comes back from this. If so we will need to display an error.
+        NSError *error;
+        BOOL response = [coreDataService createMember:memberVO withError:error];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        if(response){
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            //TODO:Pop up alert
+        }
+        //TODO:Need to check to see if an error comes back from this. If so we will need to display an error.
     }
 }
 

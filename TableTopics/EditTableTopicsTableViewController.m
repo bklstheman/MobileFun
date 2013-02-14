@@ -42,8 +42,16 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.tableTopicArray = [coreDataService getAllTableTopics];
-    [self.tableView reloadData];
+    NSError *error;
+    self.tableTopicArray = [coreDataService getAllTableTopicsWithError:error];
+    
+    if(self.tableTopicArray == nil){
+        if(error){
+            //TODO:display error
+        }
+    } else {
+        [self.tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,10 +110,15 @@
         // Delete the row from the data source
         
         TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:indexPath.row];
-        [self.coreDataService removeTableTopic:tableTopicVO];
+        NSError *error;
+        BOOL response = [self.coreDataService removeTableTopic:tableTopicVO withError:error];
         
-        [self.tableTopicArray removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        if(response){
+            [self.tableTopicArray removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        } else {
+            //TODO: display error
+        }
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

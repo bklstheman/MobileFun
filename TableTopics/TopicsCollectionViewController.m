@@ -38,8 +38,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.tableTopicArray = [coreDataService getAllTableTopics];
+    NSError *error;
+    self.tableTopicArray = [coreDataService getAllTableTopicsWithError:error];
+    if(self.tableTopicArray == nil){
+        if(error){
+            //TODO display alert
+        }
+    } else {
+        
     [self.collectionView reloadData];
+   
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,10 +88,15 @@
 {
     //Delete from core data, fetch new array, and display.
     TableTopicVO *tableTopicVO = [self.tableTopicArray objectAtIndex:topicCell.topicCellIndex.row];
-    [self.coreDataService removeTableTopic:tableTopicVO];
+    NSError *error;
+   BOOL response =  [self.coreDataService removeTableTopic:tableTopicVO withError:error];
     
-    [self.tableTopicArray removeObjectAtIndex:topicCell.topicCellIndex.row];
-    [self.collectionView deleteItemsAtIndexPaths:@[topicCell.topicCellIndex]];
-    [self.collectionView reloadData];
+    if(response){
+        [self.tableTopicArray removeObjectAtIndex:topicCell.topicCellIndex.row];
+        [self.collectionView deleteItemsAtIndexPaths:@[topicCell.topicCellIndex]];
+        [self.collectionView reloadData];
+    } else {
+        //TODO:send alert message
+    }
 }
 @end
