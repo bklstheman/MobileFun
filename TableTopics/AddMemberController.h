@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TableTopicCoreDataService.h"
+#import "TableTopicsHelper.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface AddMemberController : UIViewController

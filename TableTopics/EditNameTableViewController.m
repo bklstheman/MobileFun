@@ -45,7 +45,8 @@
     
     if(self.nameArray == nil){
         if(error){
-            //TODO:Display error
+            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to display members" withTitle:@"Retrieve Member Error"];
+            [alert show];
         }
     }
     
@@ -166,7 +167,8 @@
             }
             
         } else {
-            //TODO print alert
+            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to remove member" withTitle:@"Remobe Member Error"];
+            [alert show];
         }
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -213,7 +215,8 @@
         [cell setSelected:NO];
         [tableView reloadData];
     } else {
-        //TODO:Display alert
+        UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to select member" withTitle:@"Select Member Error"];
+        [alert show];
     }
 }
 

@@ -8,6 +8,7 @@
 
 #import "Table_TopicsViewController.h"
 #import "Table_TopicsAppDelegate.h"
+#import "TableTopicsHelper.h"
 
 @interface Table_TopicsViewController ()
 
@@ -52,7 +53,8 @@
     
     if(self.nameArray == nil){
         if(error){
-            //TODO: Display an alert
+            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to retrieve all selected members" withTitle:@"Retrieve Selected Member Error"];
+            [alert show];
         }
     }
 }

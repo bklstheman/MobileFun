@@ -69,8 +69,6 @@
 
 - (IBAction)createTableTopic:(id)sender {
     
-    
-    //Need to check if the field is empty or over 125 characters.
     if([self.tableTopicField.text length] == 0){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You must enter something." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
@@ -86,7 +84,8 @@
         if (response) {
             [self.navigationController popViewControllerAnimated:YES];
         } else {
-            //TODO:NEed to do alert thing
+            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"An error happen while creating Table Topic" withTitle:@"Add Table Topic Error"];
+            [alert show];
         }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 #import "TopicsCollectionViewController.h"
+#import "TableTopicsHelper.h"
 
 @interface TopicsCollectionViewController ()
 
@@ -42,7 +43,8 @@
     self.tableTopicArray = [coreDataService getAllTableTopicsWithError:error];
     if(self.tableTopicArray == nil){
         if(error){
-            //TODO display alert
+            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to retrieve Table Topics" withTitle:@"Retrieve Table Topics Error"];
+            [alert show];
         }
     } else {
         
@@ -96,7 +98,8 @@
         [self.collectionView deleteItemsAtIndexPaths:@[topicCell.topicCellIndex]];
         [self.collectionView reloadData];
     } else {
-        //TODO:send alert message
+        UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"Unable to delete Table Topic" withTitle:@"Delete Table Topic Error"];
+        [alert show];
     }
 }
 @end

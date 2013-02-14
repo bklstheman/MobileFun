@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TableTopicCoreDataService.h"
+#import "TableTopicsHelper.h"
 
 @interface EditNameTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 

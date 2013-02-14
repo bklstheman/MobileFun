@@ -71,9 +71,9 @@
         if(response){
             [self.navigationController popViewControllerAnimated:YES];
         } else {
-            //TODO:Pop up alert
-        }
-        //TODO:Need to check to see if an error comes back from this. If so we will need to display an error.
+            UIAlertView *alert =  [TableTopicsHelper createUIAlertView:@"An error happened while adding member" withTitle:@"Add Member Error"];
+            [alert show];
+        }   
     }
 }
 

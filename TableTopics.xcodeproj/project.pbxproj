@@ -16,7 +16,6 @@
 		4415E1B41694CD3600DA478F /* tag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4415E1B31694CD3600DA478F /* tag1.png */; };
 		4415E1B71694D90300DA478F /* AddTableTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415E1B61694D90300DA478F /* AddTableTopicController.m */; };
 		4415E1BC1694DDF300DA478F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415E1BB1694DDF300DA478F /* QuartzCore.framework */; };
-		4415E1C31695E2E400DA478F /* EditTableTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415E1C21695E2E400DA478F /* EditTableTopicsTableViewController.m */; };
 		443593531691F18100721B65 /* TableTopicCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 443593521691F18100721B65 /* TableTopicCoreDataService.m */; };
 		443EF8B7167AC6670062ED66 /* AddMemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443EF8B6167AC6670062ED66 /* AddMemberController.m */; };
 		4463FF4416764D2A005544E2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4463FF4316764D2A005544E2 /* CoreData.framework */; };
@@ -45,6 +44,7 @@
 		6B0DB14716A391F90010A0EE /* woodenblock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0DB14616A391F90010A0EE /* woodenblock.png */; };
 		6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */; };
 		6BBA915016A11FE700DBE0E5 /* card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914F16A11FE700DBE0E5 /* card.jpg */; };
+		6BD26C7B16CD834F00E6181D /* TableTopicsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD26C7A16CD834F00E6181D /* TableTopicsHelper.m */; };
 		6BE8DEC016C34F0F00FF0FA0 /* TopicsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8DEBF16C34F0F00FF0FA0 /* TopicsCollectionViewController.m */; };
 		6BE8DEC316C3589C00FF0FA0 /* TopicsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8DEC216C3589C00FF0FA0 /* TopicsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
@@ -60,8 +60,6 @@
 		4415E1B51694D90300DA478F /* AddTableTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableTopicController.h; sourceTree = "<group>"; };
 		4415E1B61694D90300DA478F /* AddTableTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableTopicController.m; sourceTree = "<group>"; };
 		4415E1BB1694DDF300DA478F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4415E1C11695E2E400DA478F /* EditTableTopicsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableTopicsTableViewController.h; sourceTree = "<group>"; };
-		4415E1C21695E2E400DA478F /* EditTableTopicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableTopicsTableViewController.m; sourceTree = "<group>"; };
 		443593511691F18100721B65 /* TableTopicCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTopicCoreDataService.h; sourceTree = "<group>"; };
 		443593521691F18100721B65 /* TableTopicCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicCoreDataService.m; sourceTree = "<group>"; };
 		443EF8B5167AC6670062ED66 /* AddMemberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemberController.h; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		6B0DB14616A391F90010A0EE /* woodenblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodenblock.png; sourceTree = "<group>"; };
 		6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2dCF2ae.jpg; sourceTree = "<group>"; };
 		6BBA914F16A11FE700DBE0E5 /* card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card.jpg; sourceTree = "<group>"; };
+		6BD26C7916CD834F00E6181D /* TableTopicsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTopicsHelper.h; sourceTree = "<group>"; };
+		6BD26C7A16CD834F00E6181D /* TableTopicsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicsHelper.m; sourceTree = "<group>"; };
 		6BE8DEBE16C34F0F00FF0FA0 /* TopicsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicsCollectionViewController.h; sourceTree = "<group>"; };
 		6BE8DEBF16C34F0F00FF0FA0 /* TopicsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicsCollectionViewController.m; sourceTree = "<group>"; };
 		6BE8DEC116C3589C00FF0FA0 /* TopicsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicsCollectionViewCell.h; sourceTree = "<group>"; };
@@ -162,8 +162,6 @@
 				443EF8B6167AC6670062ED66 /* AddMemberController.m */,
 				4415E1B51694D90300DA478F /* AddTableTopicController.h */,
 				4415E1B61694D90300DA478F /* AddTableTopicController.m */,
-				4415E1C11695E2E400DA478F /* EditTableTopicsTableViewController.h */,
-				4415E1C21695E2E400DA478F /* EditTableTopicsTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,6 +209,7 @@
 		44F466631598004900C80B05 /* TableTopics */ = {
 			isa = PBXGroup;
 			children = (
+				6BD26C7816CD833500E6181D /* Helper */,
 				4463FF56167929E7005544E2 /* Domain */,
 				4463FF551678366F005544E2 /* Controller */,
 				4463FF5416783668005544E2 /* Delegate */,
@@ -247,6 +246,15 @@
 				44F4666B1598004900C80B05 /* TableTopics-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BD26C7816CD833500E6181D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6BD26C7916CD834F00E6181D /* TableTopicsHelper.h */,
+				6BD26C7A16CD834F00E6181D /* TableTopicsHelper.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		6BE8DEBD16C349F200FF0FA0 /* Collection Views */ = {
@@ -353,9 +361,9 @@
 				443EF8B7167AC6670062ED66 /* AddMemberController.m in Sources */,
 				443593531691F18100721B65 /* TableTopicCoreDataService.m in Sources */,
 				4415E1B71694D90300DA478F /* AddTableTopicController.m in Sources */,
-				4415E1C31695E2E400DA478F /* EditTableTopicsTableViewController.m in Sources */,
 				6BE8DEC016C34F0F00FF0FA0 /* TopicsCollectionViewController.m in Sources */,
 				6BE8DEC316C3589C00FF0FA0 /* TopicsCollectionViewCell.m in Sources */,
+				6BD26C7B16CD834F00E6181D /* TableTopicsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

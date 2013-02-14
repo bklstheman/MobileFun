@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "TableTopicCoreDataService.h"
+#import "TableTopicsHelper.h"
 
 @interface AddTableTopicController : UIViewController<UITextViewDelegate, UITextFieldDelegate>
 
