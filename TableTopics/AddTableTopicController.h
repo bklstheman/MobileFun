@@ -16,5 +16,4 @@
 @property (strong, nonatomic) IBOutlet UITextView *tableTopicField;
 @property (strong, nonatomic) TableTopicCoreDataService *coreDataService;
 
-- (IBAction)createTableTopic:(id)sender;
 @end

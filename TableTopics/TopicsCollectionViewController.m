@@ -11,6 +11,8 @@
 
 @interface TopicsCollectionViewController ()
 
+-(void) addEmptyLabelMessage;
+
 @end
 
 @implementation TopicsCollectionViewController
@@ -37,6 +39,7 @@
 	// Do any additional setup after loading the view.
 }
 
+//TODO: Look at this logic again because it is still showing the label after somethings been entered.
 - (void)viewWillAppear:(BOOL)animated
 {
     NSError *error;
@@ -47,10 +50,22 @@
             [alert show];
         }
     } else {
-        
-    [self.collectionView reloadData];
-   
+        if (self.tableTopicArray.count == 0) {
+            [self addEmptyLabelMessage];
+        } else {
+            [self.collectionView reloadData];
+        }
     }
+}
+
+-(void) addEmptyLabelMessage
+{
+    UILabel *emptyLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 0, 300, 300)];
+    emptyLabel.text = @"You don't have any Table Topics. Go and create some!";
+    emptyLabel.backgroundColor = [UIColor clearColor];
+    emptyLabel.numberOfLines = 2;
+    
+    [self.view addSubview:emptyLabel];
 }
 
 - (void)didReceiveMemoryWarning

@@ -31,6 +31,7 @@
     [super viewDidLoad];
     self.tableTopicField.backgroundColor = [UIColor clearColor];
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    [self.tableTopicField becomeFirstResponder];
 
     // Do any additional setup after loading the view.
 }
@@ -46,29 +47,10 @@
     [super viewDidUnload];
 }
 
+//TODO:This looks to have some issues with the navigation controller.
 
--(BOOL)textViewShouldBeginEditing:(UITextView *)textView
-{    
-    //Remove the Enter in Text value
-    
-    if(textView.text )
-    textView.text = @"";
-    
-    return YES;
-}
-
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+-(void)textViewDidEndEditing:(UITextView *)textView
 {
-    if([text isEqualToString:@"\n"]){
-        [self.tableTopicField resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
-}
-
-- (IBAction)createTableTopic:(id)sender {
-    
     if([self.tableTopicField.text length] == 0){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You must enter something." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
@@ -88,5 +70,32 @@
             [alert show];
         }
     }
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([text isEqualToString:@"\n"]) {
+        if([self.tableTopicField.text length] == 0){
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You must enter something." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        } else if([self.tableTopicField.text length] > 125){
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You may only enter 125 characters." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        } else {
+            NSString *tableTopicDescrip = [self.tableTopicField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            
+            NSError *error;
+            BOOL response = [coreDataService createTableTopic:tableTopicDescrip withError:error];
+            
+            if (response) {
+                [self.navigationController popViewControllerAnimated:YES];
+            } else {
+                UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"An error happen while creating Table Topic" withTitle:@"Add Table Topic Error"];
+                [alert show];
+            }
+        }
+    }
+    
+    return YES;
 }
 @end
