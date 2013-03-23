@@ -47,31 +47,8 @@
     [super viewDidUnload];
 }
 
-//TODO:This looks to have some issues with the navigation controller.
 
--(void)textViewDidEndEditing:(UITextView *)textView
-{
-    if([self.tableTopicField.text length] == 0){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You must enter something." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [alert show];
-    } else if([self.tableTopicField.text length] > 125){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You may only enter 125 characters." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [alert show];
-    } else {
-        NSString *tableTopicDescrip = [self.tableTopicField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        
-        NSError *error;
-        BOOL response = [coreDataService createTableTopic:tableTopicDescrip withError:error];
-        
-        if (response) {
-            [self.navigationController popViewControllerAnimated:YES];
-        } else {
-            UIAlertView *alert = [TableTopicsHelper createUIAlertView:@"An error happen while creating Table Topic" withTitle:@"Add Table Topic Error"];
-            [alert show];
-        }
-    }
-}
-
+//TODO: This just needs to contain the top logic. Dont know why it has all this other stuff below. VERY WEIRD
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if([text isEqualToString:@"\n"]) {
@@ -98,4 +75,4 @@
     
     return YES;
 }
-@end
+ @end

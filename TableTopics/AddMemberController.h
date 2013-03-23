@@ -11,7 +11,7 @@
 #import "TableTopicsHelper.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface AddMemberController : UIViewController
+@interface AddMemberController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;

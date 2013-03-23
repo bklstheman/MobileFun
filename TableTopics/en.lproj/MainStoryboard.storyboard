@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="1" contentMode="scaleToFill" image="tag1.png" id="daX-24-Oad">
-                                <rect key="frame" x="41" y="192" width="236" height="189"/>
+                                <rect key="frame" x="42" y="182" width="236" height="189"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rZD-Qo-pyK">
-                                <rect key="frame" x="54" y="235" width="210" height="103"/>
+                                <rect key="frame" x="55" y="225" width="210" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" image="tag1.png" id="smB-Vz-Xew">
-                                <rect key="frame" x="41" y="0.0" width="236" height="189"/>
+                                <rect key="frame" x="41" y="-5" width="236" height="189"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -41,7 +41,7 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Q4c-54-4Rb">
-                                <rect key="frame" x="54" y="75" width="201" height="57"/>
+                                <rect key="frame" x="54" y="70" width="201" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -62,6 +62,10 @@
                                     <segue destination="EYp-I0-Tgy" kind="push" id="8SK-59-nfd"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iMc-bp-JML">
+                                <rect key="frame" x="0.0" y="366" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -123,7 +127,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">How to use Table Topics.
 
-Tap on the note cards or shake your device to randomly select a person and table topic. Use the Menu button to add more Table Topics or Members!</string>
+Tap on the note cards or shake your device to randomly select a person and table topic. Use the Menu button to add more Table Topics or Members.</string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -218,7 +222,7 @@ Tap on the note cards or shake your device to randomly select a person and table
             </objects>
             <point key="canvasLocation" x="259" y="69"/>
         </scene>
-        <!--Topics Collection View Controller-->
+        <!--Topics Collection View Controller - Table Topics-->
         <scene sceneID="iZS-el-W9F">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="uZu-Ur-sPU" customClass="TopicsCollectionViewController" sceneMemberID="viewController">
@@ -280,7 +284,7 @@ Tap on the note cards or shake your device to randomly select a person and table
                             <outlet property="delegate" destination="uZu-Ur-sPU" id="Zc9-Ni-OH2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="FjF-EM-vyC">
+                    <navigationItem key="navigationItem" title="Table Topics" id="FjF-EM-vyC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vwg-Az-Nbo">
                             <connections>
                                 <segue destination="ZRq-tu-dqj" kind="push" id="70L-Gg-Cc8"/>
@@ -359,13 +363,9 @@ Tap on the note cards or shake your device to randomly select a person and table
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="dismissLastNameKeyboard:" destination="CR6-dS-AtK" eventType="editingDidEndOnExit" id="2T2-NE-AGe"/>
+                                    <action selector="dismissLastNameKeyboard:" destination="CR6-dS-AtK" eventType="editingDidEndOnExit" id="sBJ-KH-SNA"/>
                                 </connections>
                             </textField>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kGi-Oc-MrW">
-                                <rect key="frame" x="0.0" y="366" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>

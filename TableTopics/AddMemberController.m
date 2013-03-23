@@ -29,10 +29,12 @@
     return self;
 }
 
+//TODO: Need to do logic now that we will have the keyboard up
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    [self.firstNameTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +54,7 @@
 }
 
 - (IBAction)dismissLastNameKeyboard:(UITextField *)sender {
-    [self resignFirstResponder];
+    [self addMember:nil];
 }
 
 - (IBAction)addMember:(id)sender {

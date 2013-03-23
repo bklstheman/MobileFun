@@ -9,6 +9,7 @@
 #import "Table_TopicsViewController.h"
 #import "Table_TopicsAppDelegate.h"
 #import "TableTopicsHelper.h"
+#import "TableTopicVO.h"
 
 @interface Table_TopicsViewController ()
 
@@ -61,8 +62,10 @@
 
 - (void)createTopicValues
 {
-    //TODO:Have this be populated by delegate method.
-    self.topicArray = [[NSMutableArray alloc]initWithObjects:
+    //TODO:Error check this.
+    NSError *error;
+    self.topicArray = [coreDataService getAllTableTopicsWithError:error];
+   /* self.topicArray = [[NSMutableArray alloc]initWithObjects:
                   @"How would you fight a bear with nothing but superglue?",
                   @"If you could be a Sesame Street character, who would you be and why?",
                   @"Name one of the hardest things you’ve done and how did it test you?",
@@ -76,7 +79,7 @@
                   @"What is the worst vacation you could go on?",
                   @"If given the chance to play a super hero in a movie, which one will you be and why?",
                   @"Describe what silence sounds like?",
-                  nil];
+                  nil];*/
 }
 
 - (void)createNameAndTopicValues
@@ -142,7 +145,8 @@
     
     [self animateTopicCard];
     
-    [topicLabel setText:[topicArray objectAtIndex:topicNumber]];
+    TableTopicVO *topicVO = [topicArray objectAtIndex:topicNumber];
+    [topicLabel setText:topicVO.topicDescription];
     [self.topicArray removeObjectAtIndex:topicNumber];
     
     if(self.topicArray.count == 0)
