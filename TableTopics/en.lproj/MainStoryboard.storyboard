@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AsG-oU-3M4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AsG-oU-3M4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,47 +9,50 @@
             <objects>
                 <viewController id="2" customClass="Table_TopicsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" id="JMj-SV-ZaD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView tag="1" contentMode="scaleToFill" image="tag1.png" id="daX-24-Oad">
-                                <rect key="frame" x="42" y="182" width="236" height="189"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JMj-SV-ZaD"/>
+                            <imageView tag="1" contentMode="scaleToFill" image="tag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="daX-24-Oad">
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" type="user" id="mV2-e6-lUw"/>
+                                    <constraint firstAttribute="width" constant="236" id="oG7-8S-Wlg"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8Ax-hh-Ec9" appends="YES" id="QsG-fT-o1O"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rZD-Qo-pyK">
-                                <rect key="frame" x="55" y="225" width="210" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="210" translatesAutoresizingMaskIntoConstraints="NO" id="rZD-Qo-pyK">
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="4sA-NC-ze5"/>
+                                    <constraint firstAttribute="width" constant="210" id="u74-U2-XBt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" image="tag1.png" id="smB-Vz-Xew">
-                                <rect key="frame" x="41" y="-5" width="236" height="189"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView contentMode="scaleToFill" image="tag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="smB-Vz-Xew">
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="4FF-Oi-nhh"/>
+                                    <constraint firstAttribute="width" constant="236" id="YIj-pN-ACf"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="fEz-Fu-NuC" appends="YES" id="y8x-Uf-FOd"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Q4c-54-4Rb">
-                                <rect key="frame" x="54" y="70" width="201" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-54-4Rb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="MRv-4F-FR2"/>
+                                    <constraint firstAttribute="width" constant="201" id="mF6-9I-RuX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="wrA-Qa-VCe">
-                                <rect key="frame" x="293" y="25" width="18" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-Qa-VCe">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,12 +65,33 @@
                                     <segue destination="EYp-I0-Tgy" kind="push" id="8SK-59-nfd"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iMc-bp-JML">
-                                <rect key="frame" x="0.0" y="366" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="iMc-bp-JML">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bbS-Dz-Bws"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" type="user" id="fRO-NJ-DYv"/>
+                                </constraints>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JMj-SV-ZaD" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5nt-Ic-caE"/>
+                            <constraint firstItem="daX-24-Oad" firstAttribute="centerY" secondItem="rZD-Qo-pyK" secondAttribute="centerY" type="default" id="6SM-8j-rw8"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="KkO-uP-Me1"/>
+                            <constraint firstItem="Q4c-54-4Rb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="54" id="KxH-oE-wA6"/>
+                            <constraint firstAttribute="trailing" secondItem="wrA-Qa-VCe" secondAttribute="trailing" constant="9" id="OLh-0s-D9V"/>
+                            <constraint firstItem="smB-Vz-Xew" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="41" id="Wn8-1O-K7y"/>
+                            <constraint firstItem="JMj-SV-ZaD" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="YSP-Sh-oWG"/>
+                            <constraint firstItem="daX-24-Oad" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="default" id="Zo6-JS-MJy"/>
+                            <constraint firstItem="smB-Vz-Xew" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-5" id="aqF-mD-A8M"/>
+                            <constraint firstItem="daX-24-Oad" firstAttribute="top" secondItem="3" secondAttribute="top" constant="182" id="b99-rd-hqd"/>
+                            <constraint firstItem="JMj-SV-ZaD" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="d1N-AQ-1hr"/>
+                            <constraint firstItem="JMj-SV-ZaD" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="d7y-KR-ZxO"/>
+                            <constraint firstItem="wrA-Qa-VCe" firstAttribute="top" secondItem="3" secondAttribute="top" constant="26" id="kmJ-Bj-dLI"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="piD-Xy-Q2m"/>
+                            <constraint firstItem="Q4c-54-4Rb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="s6V-XR-wtu"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="seG-GN-psj"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="default" id="xth-qg-0Hc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Topics" id="BWN-Mi-RxQ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="hEi-0b-LR9"/>
@@ -110,21 +134,22 @@
             <objects>
                 <viewController title="How To" id="EYp-I0-Tgy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3vN-ee-sQ1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" id="MgD-LZ-mtb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-LZ-mtb"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-12-kTB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="f9c-9p-DVH"/>
+                                    <constraint firstAttribute="height" constant="254" id="fl0-5I-xgE"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="Y1D-12-kTB">
-                                <rect key="frame" x="19" y="65" width="281" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="gLG-zd-ikm">
-                                <rect key="frame" x="35" y="131" width="248" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLG-zd-ikm">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="2OX-Qw-a95"/>
+                                    <constraint firstAttribute="width" constant="248" id="IJL-Gq-AQ7"/>
+                                </constraints>
                                 <string key="text">How to use Table Topics.
 
 Tap on the note cards or shake your device to randomly select a person and table topic. Use the Menu button to add more Table Topics or Members.</string>
@@ -133,6 +158,16 @@ Tap on the note cards or shake your device to randomly select a person and table
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gLG-zd-ikm" firstAttribute="top" secondItem="3vN-ee-sQ1" secondAttribute="top" constant="131" id="DK3-qd-2cc"/>
+                            <constraint firstItem="Y1D-12-kTB" firstAttribute="top" secondItem="3vN-ee-sQ1" secondAttribute="top" constant="65" id="KOM-Q0-7Wt"/>
+                            <constraint firstItem="MgD-LZ-mtb" firstAttribute="bottom" secondItem="3vN-ee-sQ1" secondAttribute="bottom" type="default" id="MkG-n0-u07"/>
+                            <constraint firstAttribute="trailing" secondItem="Y1D-12-kTB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="azB-Gr-tzw"/>
+                            <constraint firstItem="Y1D-12-kTB" firstAttribute="centerX" secondItem="gLG-zd-ikm" secondAttribute="centerX" type="default" id="cng-iw-Ci7"/>
+                            <constraint firstItem="MgD-LZ-mtb" firstAttribute="trailing" secondItem="3vN-ee-sQ1" secondAttribute="trailing" type="default" id="noc-7a-ixk"/>
+                            <constraint firstItem="MgD-LZ-mtb" firstAttribute="leading" secondItem="3vN-ee-sQ1" secondAttribute="leading" type="default" id="rZL-hW-qtD"/>
+                            <constraint firstItem="MgD-LZ-mtb" firstAttribute="top" secondItem="3vN-ee-sQ1" secondAttribute="top" type="default" id="y5e-E8-60X"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QH-TP-riR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,16 +179,15 @@ Tap on the note cards or shake your device to randomly select a person and table
             <objects>
                 <viewController id="yPH-al-4SU" customClass="EditMenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="POW-Ps-vhX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" id="Ki8-9p-4zU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="44G-c7-pd5">
-                                <rect key="frame" x="20" y="136" width="130" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ki8-9p-4zU"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44G-c7-pd5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="iEA-eo-aED"/>
+                                    <constraint firstAttribute="height" constant="65" id="pzZ-DC-IcX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Members" backgroundImage="curvedblock.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,9 +200,10 @@ Tap on the note cards or shake your device to randomly select a person and table
                                     <segue destination="Iqg-6h-Cxe" kind="push" id="FlD-vm-Jzd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Df-Or-lSQ">
-                                <rect key="frame" x="180" y="136" width="130" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Or-lSQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Ue8-8T-sc3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Table Topics" backgroundImage="curvedblock.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,12 +216,27 @@ Tap on the note cards or shake your device to randomly select a person and table
                                     <segue destination="uZu-Ur-sPU" kind="push" id="jjw-hg-5U9"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oj5-r0-WYF">
-                                <rect key="frame" x="0.0" y="366" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="oj5-r0-WYF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="okH-Ty-qoR"/>
+                                </constraints>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ki8-9p-4zU" firstAttribute="leading" secondItem="POW-Ps-vhX" secondAttribute="leading" type="default" id="10a-iS-uwY"/>
+                            <constraint firstItem="44G-c7-pd5" firstAttribute="top" secondItem="4Df-Or-lSQ" secondAttribute="top" type="default" id="4cX-75-LGQ"/>
+                            <constraint firstItem="Ki8-9p-4zU" firstAttribute="trailing" secondItem="POW-Ps-vhX" secondAttribute="trailing" type="default" id="78o-h2-2Er"/>
+                            <constraint firstItem="44G-c7-pd5" firstAttribute="bottom" secondItem="4Df-Or-lSQ" secondAttribute="bottom" type="default" id="98l-J6-BUf"/>
+                            <constraint firstItem="oj5-r0-WYF" firstAttribute="bottom" secondItem="POW-Ps-vhX" secondAttribute="bottom" type="default" id="HlC-Eg-ZMp"/>
+                            <constraint firstItem="Ki8-9p-4zU" firstAttribute="bottom" secondItem="POW-Ps-vhX" secondAttribute="bottom" type="default" id="U0Q-0p-H7W"/>
+                            <constraint firstItem="Ki8-9p-4zU" firstAttribute="top" secondItem="POW-Ps-vhX" secondAttribute="top" type="default" id="gJR-ge-Fyg"/>
+                            <constraint firstItem="oj5-r0-WYF" firstAttribute="trailing" secondItem="POW-Ps-vhX" secondAttribute="trailing" type="default" id="krC-o5-yOA"/>
+                            <constraint firstAttribute="trailing" secondItem="4Df-Or-lSQ" secondAttribute="trailing" constant="10" id="nDM-rc-7h5"/>
+                            <constraint firstItem="44G-c7-pd5" firstAttribute="top" secondItem="POW-Ps-vhX" secondAttribute="top" constant="136" id="p1O-TB-FEI"/>
+                            <constraint firstItem="44G-c7-pd5" firstAttribute="leading" secondItem="POW-Ps-vhX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q5T-h3-PLS"/>
+                            <constraint firstItem="oj5-r0-WYF" firstAttribute="leading" secondItem="POW-Ps-vhX" secondAttribute="leading" type="default" id="zpK-mP-9LT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="0xZ-Bh-GTK"/>
                     <connections>
@@ -227,7 +277,7 @@ Tap on the note cards or shake your device to randomly select a person and table
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="uZu-Ur-sPU" customClass="TopicsCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="4MB-gI-rzk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zGz-uz-Bqd">
                             <size key="itemSize" width="234" height="176"/>
@@ -243,20 +293,26 @@ Tap on the note cards or shake your device to randomly select a person and table
                                     <rect key="frame" x="0.0" y="0.0" width="234" height="176"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="Q6x-ez-0oY">
-                                            <rect key="frame" x="0.0" y="-7" width="236" height="189"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q6x-ez-0oY">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="236" id="0T1-OY-vS6"/>
+                                                <constraint firstAttribute="height" constant="189" id="rV3-ft-7y0"/>
+                                            </constraints>
                                         </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="lvn-8u-wbq">
-                                            <rect key="frame" x="11" y="43" width="215" height="111"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-8u-wbq">
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="215" id="23h-m3-Iy0"/>
+                                                <constraint firstAttribute="height" constant="111" id="PNw-BW-aad"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dn0-qS-o1A">
-                                            <rect key="frame" x="197" y="6" width="29" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dn0-qS-o1A">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="G8w-7z-sNN"/>
+                                                <constraint firstAttribute="width" constant="29" id="cjs-lU-R9F"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" image="circlex.png">
                                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -273,6 +329,14 @@ Tap on the note cards or shake your device to randomly select a person and table
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Q6x-ez-0oY" firstAttribute="top" secondItem="1Es-D7-jzf" secondAttribute="top" constant="-7" id="9A7-VH-Y9l"/>
+                                    <constraint firstItem="lvn-8u-wbq" firstAttribute="top" secondItem="dn0-qS-o1A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NUO-5s-298"/>
+                                    <constraint firstItem="lvn-8u-wbq" firstAttribute="centerX" secondItem="Q6x-ez-0oY" secondAttribute="centerX" type="default" id="NVZ-7n-dkC"/>
+                                    <constraint firstItem="dn0-qS-o1A" firstAttribute="top" secondItem="1Es-D7-jzf" secondAttribute="top" constant="6" id="bpg-oX-fD2"/>
+                                    <constraint firstItem="dn0-qS-o1A" firstAttribute="trailing" secondItem="lvn-8u-wbq" secondAttribute="trailing" type="default" id="w19-Vf-TgQ"/>
+                                    <constraint firstItem="Q6x-ez-0oY" firstAttribute="leading" secondItem="1Es-D7-jzf" secondAttribute="leading" type="default" id="wOH-d6-bTp"/>
+                                </constraints>
                                 <size key="customSize" width="234" height="176"/>
                                 <connections>
                                     <outlet property="tableTopicText" destination="lvn-8u-wbq" id="GQS-nd-Vbl"/>
@@ -304,20 +368,21 @@ Tap on the note cards or shake your device to randomly select a person and table
             <objects>
                 <viewController id="ZRq-tu-dqj" customClass="AddTableTopicController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YZo-eb-a7q">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" id="UPe-65-FFc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-65-FFc"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vsg-uh-Hun">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="4DS-LD-gId"/>
+                                    <constraint firstAttribute="width" constant="236" id="to3-4l-LUa"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tag1.png" id="vsg-uh-Hun">
-                                <rect key="frame" x="42" y="5" width="236" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qqw-Q9-v6m">
-                                <rect key="frame" x="61" y="47" width="198" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-Q9-v6m">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="L1x-DH-WGx"/>
+                                    <constraint firstAttribute="height" constant="115" id="LZJ-4y-IQ2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
@@ -326,6 +391,16 @@ Tap on the note cards or shake your device to randomly select a person and table
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vsg-uh-Hun" firstAttribute="top" secondItem="YZo-eb-a7q" secondAttribute="top" constant="5" id="DfL-nV-WDk"/>
+                            <constraint firstItem="qqw-Q9-v6m" firstAttribute="top" secondItem="YZo-eb-a7q" secondAttribute="top" constant="47" id="EOB-kF-vb6"/>
+                            <constraint firstItem="UPe-65-FFc" firstAttribute="centerX" secondItem="qqw-Q9-v6m" secondAttribute="centerX" type="default" id="JEi-Pa-259"/>
+                            <constraint firstItem="UPe-65-FFc" firstAttribute="trailing" secondItem="YZo-eb-a7q" secondAttribute="trailing" type="default" id="Ol9-C2-hT6"/>
+                            <constraint firstItem="UPe-65-FFc" firstAttribute="top" secondItem="YZo-eb-a7q" secondAttribute="top" type="default" id="Uc4-50-u04"/>
+                            <constraint firstItem="vsg-uh-Hun" firstAttribute="centerX" secondItem="qqw-Q9-v6m" secondAttribute="centerX" type="default" id="niQ-eN-eIz"/>
+                            <constraint firstItem="UPe-65-FFc" firstAttribute="leading" secondItem="YZo-eb-a7q" secondAttribute="leading" type="default" id="peV-zZ-C9i"/>
+                            <constraint firstItem="UPe-65-FFc" firstAttribute="bottom" secondItem="YZo-eb-a7q" secondAttribute="bottom" type="default" id="uQp-vc-HNG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Topic" id="H35-Ri-aMB"/>
                     <connections>
@@ -341,25 +416,21 @@ Tap on the note cards or shake your device to randomly select a person and table
             <objects>
                 <viewController id="CR6-dS-AtK" customClass="AddMemberController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PxK-hK-SLQ" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" id="ntO-00-GVE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" id="lw7-nQ-jQl">
-                                <rect key="frame" x="51" y="103" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2dCF2ae.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ntO-00-GVE"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lw7-nQ-jQl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="eMz-3V-1Xy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
                                 <connections>
                                     <action selector="dismissFirstNameKeyboard:" destination="CR6-dS-AtK" eventType="editingDidEndOnExit" id="zWi-eY-OYq"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" id="zgp-PT-udG">
-                                <rect key="frame" x="51" y="156" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-PT-udG">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                 <connections>
@@ -368,6 +439,17 @@ Tap on the note cards or shake your device to randomly select a person and table
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lw7-nQ-jQl" firstAttribute="trailing" secondItem="zgp-PT-udG" secondAttribute="trailing" type="default" id="FJ4-Cp-GGu"/>
+                            <constraint firstItem="ntO-00-GVE" firstAttribute="top" secondItem="PxK-hK-SLQ" secondAttribute="top" type="default" id="Ga2-5v-guw"/>
+                            <constraint firstItem="ntO-00-GVE" firstAttribute="bottom" secondItem="PxK-hK-SLQ" secondAttribute="bottom" type="default" id="aog-sI-bNd"/>
+                            <constraint firstItem="zgp-PT-udG" firstAttribute="top" secondItem="PxK-hK-SLQ" secondAttribute="top" constant="156" id="cwS-RX-8R3"/>
+                            <constraint firstItem="lw7-nQ-jQl" firstAttribute="top" secondItem="PxK-hK-SLQ" secondAttribute="top" constant="103" id="fQj-fF-EgA"/>
+                            <constraint firstItem="ntO-00-GVE" firstAttribute="leading" secondItem="PxK-hK-SLQ" secondAttribute="leading" type="default" id="fnw-R7-l0L"/>
+                            <constraint firstItem="zgp-PT-udG" firstAttribute="centerX" secondItem="ntO-00-GVE" secondAttribute="centerX" type="default" id="op6-CD-y0V"/>
+                            <constraint firstItem="lw7-nQ-jQl" firstAttribute="leading" secondItem="zgp-PT-udG" secondAttribute="leading" type="default" id="qPn-Ht-5Ce"/>
+                            <constraint firstItem="ntO-00-GVE" firstAttribute="trailing" secondItem="PxK-hK-SLQ" secondAttribute="trailing" type="default" id="wqr-3T-58L"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="CR6-dS-AtK" eventType="touchDown" id="bTr-xd-vQP"/>
                         </connections>
@@ -394,7 +476,7 @@ Tap on the note cards or shake your device to randomly select a person and table
             <objects>
                 <tableViewController id="Iqg-6h-Cxe" customClass="EditNameTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hBG-zH-a5z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -432,79 +514,9 @@ Tap on the note cards or shake your device to randomly select a person and table
         <image name="curvedblock.png" width="149" height="112"/>
         <image name="tag1.png" width="1080" height="772"/>
     </resources>
-    <classes>
-        <class className="AddMemberController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddMemberController.h"/>
-            <relationships>
-                <relationship kind="action" name="addMember:"/>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="dismissFirstNameKeyboard:" candidateClass="UITextField"/>
-                <relationship kind="action" name="dismissLastNameKeyboard:" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddTableTopicController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableTopicController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableTopicField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="EditMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="membersButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableTopicButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EditNameTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditNameTableViewController.h"/>
-        </class>
-        <class className="Table_TopicsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Table_TopicsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeNameLabel:" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="action" name="changeTopicLabel:" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="action" name="pressPickTopic:" candidateClass="UIButton"/>
-                <relationship kind="action" name="pressResetButton:"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="topicLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="topicView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TopicsCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TopicsCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="deleteTopicCollectionCell:"/>
-                <relationship kind="outlet" name="tableTopicText" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="TopicsCollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TopicsCollectionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440AE00515B0CDF200E6A42C /* PostIt_Poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 440AE00415B0CDF200E6A42C /* PostIt_Poster.jpg */; };
-		440AE00A15B0CE9300E6A42C /* post_it.png in Resources */ = {isa = PBXBuildFile; fileRef = 440AE00915B0CE9300E6A42C /* post_it.png */; };
-		440AE01315B47A1B00E6A42C /* notecards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 440AE01215B47A1B00E6A42C /* notecards.jpg */; };
 		441275BB16C96CED006AAC19 /* circlex.png in Resources */ = {isa = PBXBuildFile; fileRef = 441275BA16C96CED006AAC19 /* circlex.png */; };
-		4413DFE315B8509E00EE5AAC /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4413DFE215B8509E00EE5AAC /* red_button.png */; };
 		4415E1AF1694C7CA00DA478F /* tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4415E1AE1694C7CA00DA478F /* tag.jpg */; };
 		4415E1B41694CD3600DA478F /* tag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4415E1B31694CD3600DA478F /* tag1.png */; };
 		4415E1B71694D90300DA478F /* AddTableTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415E1B61694D90300DA478F /* AddTableTopicController.m */; };
@@ -25,9 +21,6 @@
 		4463FF5916792A08005544E2 /* MemberVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4463FF5816792A08005544E2 /* MemberVO.m */; };
 		4463FF5C16794021005544E2 /* TableTopicVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4463FF5B16794021005544E2 /* TableTopicVO.m */; };
 		44846EA015D878CA005E3C44 /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44846E9F15D878CA005E3C44 /* EditMenuViewController.m */; };
-		44D5C429159EAC0D00544989 /* topicbackground.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44D5C428159EAC0D00544989 /* topicbackground.JPG */; };
-		44D5C42B159EBA7A00544989 /* PanicButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D5C42A159EBA7A00544989 /* PanicButton.png */; };
-		44DED70115C618B300FDF58A /* green_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70015C618B300FDF58A /* green_button.png */; };
 		44DED70815C6257900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */; };
 		44DED70915C6257900FDF58A /* RoyalFurniture_Table-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */; };
 		44DED70B15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */; };
@@ -41,10 +34,7 @@
 		44F4666E1598004900C80B05 /* Table_TopicsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4666D1598004900C80B05 /* Table_TopicsAppDelegate.m */; };
 		44F466711598004900C80B05 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F4666F1598004900C80B05 /* MainStoryboard.storyboard */; };
 		44F466741598004900C80B05 /* Table_TopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F466731598004900C80B05 /* Table_TopicsViewController.m */; };
-		6B80AFA11703DB5200882C79 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B80AFA01703DB5200882C79 /* Default@2x.png */; };
-		6B80AFA31703DB5500882C79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B80AFA21703DB5500882C79 /* Default-568h@2x.png */; };
 		6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */; };
-		6BBA915016A11FE700DBE0E5 /* card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBA914F16A11FE700DBE0E5 /* card.jpg */; };
 		6BD26C7B16CD834F00E6181D /* TableTopicsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD26C7A16CD834F00E6181D /* TableTopicsHelper.m */; };
 		6BD26C7D16CD8D4E00E6181D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD26C7C16CD8D4E00E6181D /* iAd.framework */; };
 		6BE0BACB16CFE42000C536BA /* curvedblock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0BACA16CFE42000C536BA /* curvedblock.png */; };
@@ -53,11 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		440AE00415B0CDF200E6A42C /* PostIt_Poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PostIt_Poster.jpg; sourceTree = "<group>"; };
-		440AE00915B0CE9300E6A42C /* post_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_it.png; sourceTree = "<group>"; };
-		440AE01215B47A1B00E6A42C /* notecards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notecards.jpg; sourceTree = "<group>"; };
 		441275BA16C96CED006AAC19 /* circlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlex.png; sourceTree = "<group>"; };
-		4413DFE215B8509E00EE5AAC /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
 		4415E1AE1694C7CA00DA478F /* tag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tag.jpg; sourceTree = "<group>"; };
 		4415E1B31694CD3600DA478F /* tag1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag1.png; sourceTree = "<group>"; };
 		4415E1B51694D90300DA478F /* AddTableTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableTopicController.h; sourceTree = "<group>"; };
@@ -79,9 +65,6 @@
 		4463FF5B16794021005544E2 /* TableTopicVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicVO.m; sourceTree = "<group>"; };
 		44846E9E15D878CA005E3C44 /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
 		44846E9F15D878CA005E3C44 /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
-		44D5C428159EAC0D00544989 /* topicbackground.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topicbackground.JPG; sourceTree = "<group>"; };
-		44D5C42A159EBA7A00544989 /* PanicButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PanicButton.png; sourceTree = "<group>"; };
-		44DED70015C618B300FDF58A /* green_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_button.png; sourceTree = "<group>"; };
 		44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RoyalFurniture_Table-icon_small.png"; sourceTree = "<group>"; };
 		44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RoyalFurniture_Table-icon.png"; sourceTree = "<group>"; };
 		44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RoyalFurniture_Table-icon_small.png"; path = "../RoyalFurniture_Table-icon_small.png"; sourceTree = "<group>"; };
@@ -104,7 +87,6 @@
 		6B80AFA01703DB5200882C79 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		6B80AFA21703DB5500882C79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2dCF2ae.jpg; sourceTree = "<group>"; };
-		6BBA914F16A11FE700DBE0E5 /* card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card.jpg; sourceTree = "<group>"; };
 		6BD26C7916CD834F00E6181D /* TableTopicsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTopicsHelper.h; sourceTree = "<group>"; };
 		6BD26C7A16CD834F00E6181D /* TableTopicsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicsHelper.m; sourceTree = "<group>"; };
 		6BD26C7C16CD8D4E00E6181D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -236,22 +218,14 @@
 				6BE0BACA16CFE42000C536BA /* curvedblock.png */,
 				441275BA16C96CED006AAC19 /* circlex.png */,
 				6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */,
-				6BBA914F16A11FE700DBE0E5 /* card.jpg */,
 				4415E1AE1694C7CA00DA478F /* tag.jpg */,
 				44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */,
 				4415E1B31694CD3600DA478F /* tag1.png */,
 				44DED70C15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png */,
 				44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */,
 				44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */,
-				44DED70015C618B300FDF58A /* green_button.png */,
-				4413DFE215B8509E00EE5AAC /* red_button.png */,
-				440AE01215B47A1B00E6A42C /* notecards.jpg */,
-				440AE00415B0CDF200E6A42C /* PostIt_Poster.jpg */,
-				440AE00915B0CE9300E6A42C /* post_it.png */,
 				44F466651598004900C80B05 /* TableTopics-Info.plist */,
 				44F466661598004900C80B05 /* InfoPlist.strings */,
-				44D5C428159EAC0D00544989 /* topicbackground.JPG */,
-				44D5C42A159EBA7A00544989 /* PanicButton.png */,
 				44F466691598004900C80B05 /* main.m */,
 				44F4666B1598004900C80B05 /* TableTopics-Prefix.pch */,
 			);
@@ -331,13 +305,6 @@
 			files = (
 				44F466681598004900C80B05 /* InfoPlist.strings in Resources */,
 				44F466711598004900C80B05 /* MainStoryboard.storyboard in Resources */,
-				44D5C429159EAC0D00544989 /* topicbackground.JPG in Resources */,
-				44D5C42B159EBA7A00544989 /* PanicButton.png in Resources */,
-				440AE00515B0CDF200E6A42C /* PostIt_Poster.jpg in Resources */,
-				440AE00A15B0CE9300E6A42C /* post_it.png in Resources */,
-				440AE01315B47A1B00E6A42C /* notecards.jpg in Resources */,
-				4413DFE315B8509E00EE5AAC /* red_button.png in Resources */,
-				44DED70115C618B300FDF58A /* green_button.png in Resources */,
 				44DED70815C6257900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */,
 				44DED70915C6257900FDF58A /* RoyalFurniture_Table-icon.png in Resources */,
 				44DED70B15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */,
@@ -345,11 +312,8 @@
 				4415E1AF1694C7CA00DA478F /* tag.jpg in Resources */,
 				4415E1B41694CD3600DA478F /* tag1.png in Resources */,
 				6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */,
-				6BBA915016A11FE700DBE0E5 /* card.jpg in Resources */,
 				441275BB16C96CED006AAC19 /* circlex.png in Resources */,
 				6BE0BACB16CFE42000C536BA /* curvedblock.png in Resources */,
-				6B80AFA11703DB5200882C79 /* Default@2x.png in Resources */,
-				6B80AFA31703DB5500882C79 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
