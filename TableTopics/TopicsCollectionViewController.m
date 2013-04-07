@@ -39,7 +39,6 @@
 	// Do any additional setup after loading the view.
 }
 
-//TODO: Look at this logic again because it is still showing the label after somethings been entered.
 - (void)viewWillAppear:(BOOL)animated
 {
     NSError *error;
@@ -54,6 +53,12 @@
             [self addEmptyLabelMessage];
         } else {
             [self.collectionView reloadData];
+            
+            for(id view in self.view.subviews){
+                if([view isKindOfClass:[UILabel class]]){
+                    [view removeFromSuperview];
+                }
+            }
         }
     }
 }
