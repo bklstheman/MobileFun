@@ -48,7 +48,6 @@
 }
 
 
-//TODO: This just needs to contain the top logic. Dont know why it has all this other stuff below. VERY WEIRD
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if([text isEqualToString:@"\n"]) {

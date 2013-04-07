@@ -62,24 +62,8 @@
 
 - (void)createTopicValues
 {
-    //TODO:Error check this.
     NSError *error;
     self.topicArray = [coreDataService getAllTableTopicsWithError:error];
-   /* self.topicArray = [[NSMutableArray alloc]initWithObjects:
-                  @"How would you fight a bear with nothing but superglue?",
-                  @"If you could be a Sesame Street character, who would you be and why?",
-                  @"Name one of the hardest things you’ve done and how did it test you?",
-                  @"What is the coolest prize you can get from a cereal box?",
-                  @"Pick a city anywhere in the world that you would want to visit and tell us why.",
-                  @"If you could break one law, what law would that be?",
-                  @"Tell us what your perfect staycation",
-                  @"If you could rename yourself what name would you choose?",
-                  @"If the internet went down, how would you personally be impacted?",
-                  @"Name one super power you would want and what would you use it for?",
-                  @"What is the worst vacation you could go on?",
-                  @"If given the chance to play a super hero in a movie, which one will you be and why?",
-                  @"Describe what silence sounds like?",
-                  nil];*/
 }
 
 - (void)createNameAndTopicValues

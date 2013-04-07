@@ -161,7 +161,6 @@
 -(BOOL) editIsSelect:(MemberVO *) memberVO withError:(NSError *)error
 {
     
-    //TODO:Need to use different key then managedObjectContext.
     Member *memberToUpdate = (Member *)[self.managedObjectContext existingObjectWithID:memberVO.objectId error:&error];
            
     if([memberVO.isMemberSelected isEqualToNumber:[NSNumber numberWithBool:FALSE]]){
@@ -172,7 +171,6 @@
     
     if(![self.managedObjectContext save:&error]){
         return false;
-        //NSLog(@"Error %@", [error localizedFailureReason]);
     }
     
     return true;
