@@ -14,8 +14,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>RoyalFurniture_Table-icon_small.png</string>
-				<string>RoyalFurniture_Table-icon_large.png</string>
+				<string>Icon.png</string>
+				<string>Icon@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
