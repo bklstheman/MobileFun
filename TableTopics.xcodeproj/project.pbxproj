@@ -21,10 +21,6 @@
 		4463FF5916792A08005544E2 /* MemberVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4463FF5816792A08005544E2 /* MemberVO.m */; };
 		4463FF5C16794021005544E2 /* TableTopicVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4463FF5B16794021005544E2 /* TableTopicVO.m */; };
 		44846EA015D878CA005E3C44 /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44846E9F15D878CA005E3C44 /* EditMenuViewController.m */; };
-		44DED70815C6257900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */; };
-		44DED70915C6257900FDF58A /* RoyalFurniture_Table-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */; };
-		44DED70B15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */; };
-		44DED70D15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DED70C15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png */; };
 		44DED71815C8CF6B00FDF58A /* EditNameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DED71715C8CF6B00FDF58A /* EditNameTableViewController.m */; };
 		44F4665E1598004900C80B05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F4665D1598004900C80B05 /* UIKit.framework */; };
 		44F466601598004900C80B05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F4665F1598004900C80B05 /* Foundation.framework */; };
@@ -81,10 +77,6 @@
 		4463FF5B16794021005544E2 /* TableTopicVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTopicVO.m; sourceTree = "<group>"; };
 		44846E9E15D878CA005E3C44 /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
 		44846E9F15D878CA005E3C44 /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
-		44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RoyalFurniture_Table-icon_small.png"; sourceTree = "<group>"; };
-		44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RoyalFurniture_Table-icon.png"; sourceTree = "<group>"; };
-		44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RoyalFurniture_Table-icon_small.png"; path = "../RoyalFurniture_Table-icon_small.png"; sourceTree = "<group>"; };
-		44DED70C15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RoyalFurniture_Table-icon_large.png"; path = "../RoyalFurniture_Table-icon_large.png"; sourceTree = "<group>"; };
 		44DED71615C8CF6B00FDF58A /* EditNameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameTableViewController.h; sourceTree = "<group>"; };
 		44DED71715C8CF6B00FDF58A /* EditNameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNameTableViewController.m; sourceTree = "<group>"; };
 		44F466591598004900C80B05 /* TableTopics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTopics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,11 +244,7 @@
 				441275BA16C96CED006AAC19 /* circlex.png */,
 				6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */,
 				4415E1AE1694C7CA00DA478F /* tag.jpg */,
-				44DED70A15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png */,
 				4415E1B31694CD3600DA478F /* tag1.png */,
-				44DED70C15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png */,
-				44DED70615C6257900FDF58A /* RoyalFurniture_Table-icon_small.png */,
-				44DED70715C6257900FDF58A /* RoyalFurniture_Table-icon.png */,
 				44F466651598004900C80B05 /* TableTopics-Info.plist */,
 				44F466661598004900C80B05 /* InfoPlist.strings */,
 				44F466691598004900C80B05 /* main.m */,
@@ -357,10 +345,6 @@
 			files = (
 				44F466681598004900C80B05 /* InfoPlist.strings in Resources */,
 				44F466711598004900C80B05 /* MainStoryboard.storyboard in Resources */,
-				44DED70815C6257900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */,
-				44DED70915C6257900FDF58A /* RoyalFurniture_Table-icon.png in Resources */,
-				44DED70B15C625A900FDF58A /* RoyalFurniture_Table-icon_small.png in Resources */,
-				44DED70D15C6264600FDF58A /* RoyalFurniture_Table-icon_large.png in Resources */,
 				4415E1AF1694C7CA00DA478F /* tag.jpg in Resources */,
 				4415E1B41694CD3600DA478F /* tag1.png in Resources */,
 				6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */,
