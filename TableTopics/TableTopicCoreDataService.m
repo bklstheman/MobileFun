@@ -149,7 +149,7 @@
     
     newMember.firstName = memberVO.firstName;
     newMember.lastName = memberVO.lastName;
-    newMember.isMemberSelected = [NSNumber numberWithBool:FALSE];
+    newMember.isMemberSelected = [NSNumber numberWithBool:TRUE];
     
     if(![self.managedObjectContext save:&error]){
         return false;
