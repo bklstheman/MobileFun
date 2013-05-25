@@ -24,6 +24,7 @@
 @synthesize topicArray;
 @synthesize delegate;
 @synthesize coreDataService;
+@synthesize adBannerView;
 
 
 #pragma Inital Controller setup methods
@@ -33,6 +34,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.coreDataService = [[TableTopicCoreDataService alloc]init];
+    //self.adBannerView.hidden = YES;
     
     [self becomeFirstResponder];
 }
@@ -40,6 +42,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self createNameAndTopicValues];
+
 }
 
 -(BOOL)canBecomeFirstResponder
@@ -86,6 +89,7 @@
     [self setTopicLabel:nil];
     [self setNameView:nil];
     [self setTopicView:nil];
+    [self setAdBannerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -148,8 +152,8 @@
 }
 
 - (IBAction)pressResetButton:(id)sender {
-    [nameLabel setText:@"Name:"];
-    [topicLabel setText:@"Topic:"];
+    [nameLabel setText:@"Name"];
+    [topicLabel setText:@"Topic"];
     
     [self createNameAndTopicValues];
 }
@@ -188,5 +192,26 @@
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.topicView cache:YES];
     [UIView commitAnimations];
     
+}
+
+#pragma Ad Banner methods
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if(!banner.hidden){
+        [UIView animateWithDuration:0.25 animations:^{
+            banner.frame = CGRectOffset(banner.frame, 0, self.view.frame.size.height);
+            banner.hidden = YES;
+        }];
+    }
+}
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if(banner.hidden){
+        [UIView animateWithDuration:0.25 animations:^{
+            banner.frame = CGRectOffset(banner.frame, 0, -self.view.frame.size.height);
+            banner.hidden = NO;
+        }];
+    }
 }
 @end

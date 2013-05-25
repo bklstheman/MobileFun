@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		441275BB16C96CED006AAC19 /* circlex.png in Resources */ = {isa = PBXBuildFile; fileRef = 441275BA16C96CED006AAC19 /* circlex.png */; };
-		4415E1AF1694C7CA00DA478F /* tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4415E1AE1694C7CA00DA478F /* tag.jpg */; };
 		4415E1B41694CD3600DA478F /* tag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4415E1B31694CD3600DA478F /* tag1.png */; };
 		4415E1B71694D90300DA478F /* AddTableTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415E1B61694D90300DA478F /* AddTableTopicController.m */; };
 		4415E1BC1694DDF300DA478F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415E1BB1694DDF300DA478F /* QuartzCore.framework */; };
@@ -56,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		441275BA16C96CED006AAC19 /* circlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlex.png; sourceTree = "<group>"; };
-		4415E1AE1694C7CA00DA478F /* tag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tag.jpg; sourceTree = "<group>"; };
 		4415E1B31694CD3600DA478F /* tag1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag1.png; sourceTree = "<group>"; };
 		4415E1B51694D90300DA478F /* AddTableTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableTopicController.h; sourceTree = "<group>"; };
 		4415E1B61694D90300DA478F /* AddTableTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableTopicController.m; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				6BE0BACA16CFE42000C536BA /* curvedblock.png */,
 				441275BA16C96CED006AAC19 /* circlex.png */,
 				6BBA914C16A1166800DBE0E5 /* 2dCF2ae.jpg */,
-				4415E1AE1694C7CA00DA478F /* tag.jpg */,
 				4415E1B31694CD3600DA478F /* tag1.png */,
 				44F466651598004900C80B05 /* TableTopics-Info.plist */,
 				44F466661598004900C80B05 /* InfoPlist.strings */,
@@ -345,7 +342,6 @@
 			files = (
 				44F466681598004900C80B05 /* InfoPlist.strings in Resources */,
 				44F466711598004900C80B05 /* MainStoryboard.storyboard in Resources */,
-				4415E1AF1694C7CA00DA478F /* tag.jpg in Resources */,
 				4415E1B41694CD3600DA478F /* tag1.png in Resources */,
 				6BBA914D16A1166800DBE0E5 /* 2dCF2ae.jpg in Resources */,
 				441275BB16C96CED006AAC19 /* circlex.png in Resources */,

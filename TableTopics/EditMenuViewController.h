@@ -9,8 +9,9 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <iAd/iAd.h>
 
-@interface EditMenuViewController : UIViewController
+@interface EditMenuViewController : UIViewController<ADBannerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *membersButton;
 @property (strong, nonatomic) IBOutlet UIButton *tableTopicButton;

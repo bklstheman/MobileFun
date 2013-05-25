@@ -17,7 +17,7 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="189" type="user" id="mV2-e6-lUw"/>
-                                    <constraint firstAttribute="width" constant="236" id="oG7-8S-Wlg"/>
+                                    <constraint firstAttribute="width" constant="236" type="user" id="oG7-8S-Wlg"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8Ax-hh-Ec9" appends="YES" id="QsG-fT-o1O"/>
@@ -68,29 +68,33 @@
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="iMc-bp-JML">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bbS-Dz-Bws"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" type="user" id="fRO-NJ-DYv"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="wvi-B6-R6E"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JMj-SV-ZaD" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5nt-Ic-caE"/>
                             <constraint firstItem="daX-24-Oad" firstAttribute="centerY" secondItem="rZD-Qo-pyK" secondAttribute="centerY" type="default" id="6SM-8j-rw8"/>
-                            <constraint firstItem="iMc-bp-JML" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="KkO-uP-Me1"/>
+                            <constraint firstItem="daX-24-Oad" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="42" type="user" id="J0F-kz-TMs"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="KkO-uP-Me1"/>
                             <constraint firstItem="Q4c-54-4Rb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="54" id="KxH-oE-wA6"/>
                             <constraint firstAttribute="trailing" secondItem="wrA-Qa-VCe" secondAttribute="trailing" constant="9" id="OLh-0s-D9V"/>
                             <constraint firstItem="smB-Vz-Xew" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="41" id="Wn8-1O-K7y"/>
                             <constraint firstItem="JMj-SV-ZaD" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="YSP-Sh-oWG"/>
-                            <constraint firstItem="daX-24-Oad" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="default" id="Zo6-JS-MJy"/>
+                            <constraint firstItem="daX-24-Oad" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="user" id="Zo6-JS-MJy"/>
                             <constraint firstItem="smB-Vz-Xew" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-5" id="aqF-mD-A8M"/>
                             <constraint firstItem="daX-24-Oad" firstAttribute="top" secondItem="3" secondAttribute="top" constant="182" id="b99-rd-hqd"/>
                             <constraint firstItem="JMj-SV-ZaD" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="d1N-AQ-1hr"/>
                             <constraint firstItem="JMj-SV-ZaD" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="d7y-KR-ZxO"/>
+                            <constraint firstAttribute="trailing" secondItem="daX-24-Oad" secondAttribute="trailing" constant="42" type="user" id="k2U-JS-kOM"/>
                             <constraint firstItem="wrA-Qa-VCe" firstAttribute="top" secondItem="3" secondAttribute="top" constant="26" id="kmJ-Bj-dLI"/>
-                            <constraint firstItem="iMc-bp-JML" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="piD-Xy-Q2m"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="user" id="piD-Xy-Q2m"/>
                             <constraint firstItem="Q4c-54-4Rb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="s6V-XR-wtu"/>
                             <constraint firstItem="iMc-bp-JML" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="seG-GN-psj"/>
-                            <constraint firstItem="iMc-bp-JML" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="default" id="xth-qg-0Hc"/>
+                            <constraint firstItem="iMc-bp-JML" firstAttribute="centerX" secondItem="rZD-Qo-pyK" secondAttribute="centerX" type="user" id="xth-qg-0Hc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Topics" id="BWN-Mi-RxQ">
@@ -107,6 +111,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adBannerView" destination="iMc-bp-JML" id="FHg-mR-FsT"/>
                         <outlet property="nameLabel" destination="Q4c-54-4Rb" id="Sj0-ec-jGY"/>
                         <outlet property="nameView" destination="smB-Vz-Xew" id="gMl-8b-JEz"/>
                         <outlet property="topicLabel" destination="rZD-Qo-pyK" id="lOX-Zv-Dy9"/>
@@ -216,11 +221,6 @@ Tap on the note cards or shake your device to randomly select a person and table
                                     <segue destination="uZu-Ur-sPU" kind="push" id="jjw-hg-5U9"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="oj5-r0-WYF">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="okH-Ty-qoR"/>
-                                </constraints>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -228,14 +228,11 @@ Tap on the note cards or shake your device to randomly select a person and table
                             <constraint firstItem="44G-c7-pd5" firstAttribute="top" secondItem="4Df-Or-lSQ" secondAttribute="top" type="default" id="4cX-75-LGQ"/>
                             <constraint firstItem="Ki8-9p-4zU" firstAttribute="trailing" secondItem="POW-Ps-vhX" secondAttribute="trailing" type="default" id="78o-h2-2Er"/>
                             <constraint firstItem="44G-c7-pd5" firstAttribute="bottom" secondItem="4Df-Or-lSQ" secondAttribute="bottom" type="default" id="98l-J6-BUf"/>
-                            <constraint firstItem="oj5-r0-WYF" firstAttribute="bottom" secondItem="POW-Ps-vhX" secondAttribute="bottom" type="default" id="HlC-Eg-ZMp"/>
                             <constraint firstItem="Ki8-9p-4zU" firstAttribute="bottom" secondItem="POW-Ps-vhX" secondAttribute="bottom" type="default" id="U0Q-0p-H7W"/>
                             <constraint firstItem="Ki8-9p-4zU" firstAttribute="top" secondItem="POW-Ps-vhX" secondAttribute="top" type="default" id="gJR-ge-Fyg"/>
-                            <constraint firstItem="oj5-r0-WYF" firstAttribute="trailing" secondItem="POW-Ps-vhX" secondAttribute="trailing" type="default" id="krC-o5-yOA"/>
                             <constraint firstAttribute="trailing" secondItem="4Df-Or-lSQ" secondAttribute="trailing" constant="10" id="nDM-rc-7h5"/>
                             <constraint firstItem="44G-c7-pd5" firstAttribute="top" secondItem="POW-Ps-vhX" secondAttribute="top" constant="136" id="p1O-TB-FEI"/>
                             <constraint firstItem="44G-c7-pd5" firstAttribute="leading" secondItem="POW-Ps-vhX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q5T-h3-PLS"/>
-                            <constraint firstItem="oj5-r0-WYF" firstAttribute="leading" secondItem="POW-Ps-vhX" secondAttribute="leading" type="default" id="zpK-mP-9LT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="0xZ-Bh-GTK"/>
@@ -535,6 +532,7 @@ Tap on the note cards or shake your device to randomly select a person and table
         <class className="EditMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditMenuViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="adBannerView" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="membersButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tableTopicButton" candidateClass="UIButton"/>
             </relationships>
@@ -552,6 +550,7 @@ Tap on the note cards or shake your device to randomly select a person and table
                 <relationship kind="action" name="changeTopicLabel:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="action" name="pressPickTopic:" candidateClass="UIButton"/>
                 <relationship kind="action" name="pressResetButton:"/>
+                <relationship kind="outlet" name="adBannerView" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="topicLabel" candidateClass="UILabel"/>
@@ -582,9 +581,6 @@ Tap on the note cards or shake your device to randomly select a person and table
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

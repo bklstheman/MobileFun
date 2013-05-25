@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Table_TopicsAppDelegate.h"
 #import "TableTopicCoreDataService.h"
+#import <iAd/iAd.h>
 
-@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface Table_TopicsViewController : UIViewController <UIGestureRecognizerDelegate, ADBannerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *nameView;
 @property (strong, nonatomic) IBOutlet UIImageView *topicView;
+@property (strong, nonatomic) IBOutlet ADBannerView *adBannerView;
 
 @property (strong, nonatomic) NSMutableArray *nameArray;
 @property (strong, nonatomic) NSMutableArray *topicArray;
