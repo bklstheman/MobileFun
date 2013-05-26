@@ -35,28 +35,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/*
-#pragma Ad Banner methods
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    if(!banner.hidden){
-        [UIView animateWithDuration:0.25 animations:^{
-            banner.frame = CGRectOffset(banner.frame, 0, self.view.frame.size.height);
-            banner.hidden = YES;
-        }];
-    }
-}
 
--(void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    if(banner.hidden){
-        [UIView animateWithDuration:0.25 animations:^{
-            banner.frame = CGRectOffset(banner.frame, 0, -self.view.frame.size.height);
-            banner.hidden = NO;
-        }];
-    }
-}
-*/
 - (void)viewDidUnload {
     [self setMembersButton:nil];
     [self setTableTopicButton:nil];
