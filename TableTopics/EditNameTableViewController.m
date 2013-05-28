@@ -122,10 +122,8 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    MemberVO *memberVO = [[MemberVO alloc]init];
-        
-    memberVO = [self.nameArray objectAtIndex:indexPath.row];
+            
+   MemberVO *memberVO = [self.nameArray objectAtIndex:indexPath.row];
 
     cell.textLabel.text = memberVO.printFullName;
     
